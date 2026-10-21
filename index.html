@@ -2,15 +2,15 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GVYKZ5W8X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GVYKZ5W8X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-6GVYKZ5W8X');
-</script>
+    gtag('config', 'G-6GVYKZ5W8X');
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Root &amp; Roasted | Roasted Jowar Puffs, Baked Ragi Crisps &amp; Healthy Millet Snacks India</title>
@@ -679,9 +679,339 @@
           <span>Subtotal</span>
           <span id="cartTotal">₹89</span>
         </div>
-        <button class="w-full bg-forest-800 hover:bg-forest-700 text-white font-bold py-3 rounded-xl transition">
-          Proceed to Checkout
+        <button id="proceedToCheckoutBtn" class="w-full bg-forest-800 hover:bg-forest-700 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+          <span>Proceed to Checkout</span>
+          <span class="text-lg">&rarr;</span>
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Page Modal Overlay -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-forest-900/80 backdrop-blur-sm">
+    <div class="min-h-screen px-3 sm:px-6 py-6 sm:py-10 flex items-center justify-center">
+      <div class="bg-[#FAF6F0] w-full max-w-4xl rounded-3xl shadow-2xl border border-kraft-200 overflow-hidden relative text-forest-900">
+        
+        <!-- Checkout Top Header -->
+        <div class="bg-forest-900 text-white px-5 sm:px-8 py-4 flex items-center justify-between border-b border-forest-700">
+          <div class="flex items-center gap-3">
+            <button id="closeCheckoutBtn" class="text-blush-200 hover:text-white flex items-center gap-1.5 text-xs sm:text-sm font-semibold transition py-1 px-2 rounded-lg hover:bg-forest-800">
+              <span>&larr;</span> <span>Back</span>
+            </button>
+            <div class="h-4 w-px bg-forest-700 hidden sm:block"></div>
+            <span class="font-serif font-bold text-lg sm:text-xl tracking-wide">ROOT &amp; ROASTED</span>
+            <span class="text-xs bg-blush-500/20 text-blush-200 border border-blush-500/40 px-2 py-0.5 rounded font-mono hidden md:inline">Checkout</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-blush-100">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>🔒 256-Bit SSL Secured</span>
+          </div>
+        </div>
+
+        <!-- Main Checkout View (Forms & Summary) -->
+        <div id="checkoutMainView" class="p-5 sm:p-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Column: Delivery Address, Platform Choice & Payment -->
+            <div class="lg:col-span-7 space-y-6">
+
+              <!-- Step 1: Delivery Address -->
+              <div class="bg-white rounded-2xl p-5 border border-kraft-200 shadow-xs">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-forest-800 text-white flex items-center justify-center text-xs font-bold">1</span>
+                    <h3 class="font-bold text-forest-900 text-base">Delivery Address</h3>
+                  </div>
+                  <button id="toggleEditAddressBtn" type="button" class="text-xs font-bold text-forest-700 hover:text-forest-900 underline">
+                    Edit Address
+                  </button>
+                </div>
+
+                <!-- Static Address Card Display -->
+                <div id="addressDisplayCard" class="bg-kraft-50 border border-kraft-200 rounded-xl p-3.5 space-y-1 text-xs sm:text-sm">
+                  <div class="flex items-center justify-between">
+                    <span id="displayRecipientName" class="font-bold text-forest-900">Aarav Sharma</span>
+                    <span class="bg-forest-100 text-forest-800 text-[10px] font-bold px-2 py-0.5 rounded-full">🏠 Home</span>
+                  </div>
+                  <div id="displayRecipientPhone" class="text-gray-600">+91 98201 45892</div>
+                  <p id="displayFullAddress" class="text-gray-700 pt-1 leading-relaxed">
+                    Flat 402, Tower B, Greenwoods Residency, 14th Main Rd, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka &mdash; 560038
+                  </p>
+                </div>
+
+                <!-- Editable Address Form (Hidden by default) -->
+                <div id="addressEditForm" class="hidden mt-3 pt-3 border-t border-kraft-200 space-y-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                    <div>
+                      <label class="block font-medium text-gray-700 mb-1">Full Name</label>
+                      <input id="editNameInput" type="text" value="Aarav Sharma" class="w-full border border-kraft-200 rounded-lg p-2 text-forest-900 focus:outline-none focus:border-forest-600">
+                    </div>
+                    <div>
+                      <label class="block font-medium text-gray-700 mb-1">Mobile Number</label>
+                      <input id="editPhoneInput" type="text" value="+91 98201 45892" class="w-full border border-kraft-200 rounded-lg p-2 text-forest-900 focus:outline-none focus:border-forest-600">
+                    </div>
+                  </div>
+                  <div class="text-xs">
+                    <label class="block font-medium text-gray-700 mb-1">Flat / House / Building &amp; Street</label>
+                    <input id="editAddressInput" type="text" value="Flat 402, Tower B, Greenwoods Residency, 14th Main Rd, HAL 2nd Stage, Indiranagar" class="w-full border border-kraft-200 rounded-lg p-2 text-forest-900 focus:outline-none focus:border-forest-600">
+                  </div>
+                  <div class="grid grid-cols-2 gap-3 text-xs">
+                    <div>
+                      <label class="block font-medium text-gray-700 mb-1">City &amp; State</label>
+                      <input id="editCityInput" type="text" value="Bengaluru, Karnataka" class="w-full border border-kraft-200 rounded-lg p-2 text-forest-900 focus:outline-none focus:border-forest-600">
+                    </div>
+                    <div>
+                      <label class="block font-medium text-gray-700 mb-1">PIN Code</label>
+                      <input id="editPincodeInput" type="text" value="560038" class="w-full border border-kraft-200 rounded-lg p-2 text-forest-900 focus:outline-none focus:border-forest-600">
+                    </div>
+                  </div>
+                  <div class="flex justify-end gap-2 pt-1">
+                    <button id="cancelEditAddressBtn" type="button" class="text-xs text-gray-600 px-3 py-1.5 rounded-lg border border-kraft-200 hover:bg-kraft-100">Cancel</button>
+                    <button id="saveAddressBtn" type="button" class="text-xs bg-forest-800 text-white font-bold px-4 py-1.5 rounded-lg hover:bg-forest-700">Save Address</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: Choose Delivery Partner (Zepto, Blinkit, Amazon) -->
+              <div class="bg-white rounded-2xl p-5 border border-kraft-200 shadow-xs">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-6 h-6 rounded-full bg-forest-800 text-white flex items-center justify-center text-xs font-bold">2</span>
+                  <h3 class="font-bold text-forest-900 text-base">Select Delivery Platform</h3>
+                </div>
+                <p class="text-xs text-gray-500 mb-3">Choose your preferred fulfillment partner for delivery to your location:</p>
+
+                <div class="space-y-3">
+                  <!-- Option 1: Zepto -->
+                  <label class="delivery-option-card flex items-start gap-3.5 p-3.5 rounded-xl border-2 border-forest-800 bg-forest-50/40 cursor-pointer transition relative" data-platform="zepto" data-fee="15" data-eta="10 mins" data-name="Zepto">
+                    <input type="radio" name="deliveryPartner" value="zepto" checked class="mt-1 text-forest-800 focus:ring-forest-800">
+                    <div class="flex-grow">
+                      <div class="flex items-center justify-between flex-wrap gap-1">
+                        <div class="flex items-center gap-2">
+                          <span class="bg-[#590B95] text-white text-[11px] font-black px-2 py-0.5 rounded tracking-wider">ZEPTO</span>
+                          <span class="font-bold text-forest-900 text-sm">Zepto 10-Min Express</span>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">⚡ 10 mins</span>
+                      </div>
+                      <p class="text-xs text-gray-600 mt-1">Dispatched directly from nearest Indiranagar Dark Store (0.8 km)</p>
+                      <div class="text-[11px] text-gray-500 mt-1 flex items-center gap-2">
+                        <span>Delivery Fee: <strong class="text-forest-900">₹15</strong> (Free above ₹99)</span>
+                        <span>·</span>
+                        <span class="text-emerald-700 font-medium">Dark Store Ready</span>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Option 2: Blinkit -->
+                  <label class="delivery-option-card flex items-start gap-3.5 p-3.5 rounded-xl border border-kraft-200 hover:border-forest-700 bg-white cursor-pointer transition relative" data-platform="blinkit" data-fee="15" data-eta="12 mins" data-name="Blinkit">
+                    <input type="radio" name="deliveryPartner" value="blinkit" class="mt-1 text-forest-800 focus:ring-forest-800">
+                    <div class="flex-grow">
+                      <div class="flex items-center justify-between flex-wrap gap-1">
+                        <div class="flex items-center gap-2">
+                          <span class="bg-[#F8CB46] text-black text-[11px] font-black px-2 py-0.5 rounded tracking-wider">blinkit</span>
+                          <span class="font-bold text-forest-900 text-sm">Blinkit Quick Delivery</span>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">⚡ 12 mins</span>
+                      </div>
+                      <p class="text-xs text-gray-600 mt-1">Dispatched from Blinkit Central Hub · Live Rider Tracking</p>
+                      <div class="text-[11px] text-gray-500 mt-1 flex items-center gap-2">
+                        <span>Delivery Fee: <strong class="text-forest-900">₹15</strong></span>
+                        <span>·</span>
+                        <span class="text-forest-800 font-medium">Quick Comm Partner</span>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Option 3: Amazon -->
+                  <label class="delivery-option-card flex items-start gap-3.5 p-3.5 rounded-xl border border-kraft-200 hover:border-forest-700 bg-white cursor-pointer transition relative" data-platform="amazon" data-fee="0" data-eta="Today by 7:00 PM" data-name="Amazon">
+                    <input type="radio" name="deliveryPartner" value="amazon" class="mt-1 text-forest-800 focus:ring-forest-800">
+                    <div class="flex-grow">
+                      <div class="flex items-center justify-between flex-wrap gap-1">
+                        <div class="flex items-center gap-2">
+                          <span class="bg-[#146EB4] text-white text-[11px] font-black px-2 py-0.5 rounded tracking-wider">amazon</span>
+                          <span class="font-bold text-forest-900 text-sm">Amazon Prime Same-Day</span>
+                        </div>
+                        <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">📦 Today by 7 PM</span>
+                      </div>
+                      <p class="text-xs text-gray-600 mt-1">Fulfilled by Amazon Fresh &amp; Pantry · Signature Corrugated Box</p>
+                      <div class="text-[11px] text-gray-500 mt-1 flex items-center gap-2">
+                        <span>Delivery Fee: <strong class="text-emerald-700">FREE Prime Delivery</strong></span>
+                        <span>·</span>
+                        <span class="text-blue-700 font-medium">Prime Guaranteed</span>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 3: Payment Method -->
+              <div class="bg-white rounded-2xl p-5 border border-kraft-200 shadow-xs">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-6 h-6 rounded-full bg-forest-800 text-white flex items-center justify-center text-xs font-bold">3</span>
+                  <h3 class="font-bold text-forest-900 text-base">Payment Method</h3>
+                </div>
+                
+                <div class="space-y-2 text-xs sm:text-sm">
+                  <label class="flex items-center justify-between p-3 rounded-xl border border-forest-800 bg-forest-50/30 cursor-pointer">
+                    <div class="flex items-center gap-2.5">
+                      <input type="radio" name="paymentOption" value="UPI" checked class="text-forest-800 focus:ring-forest-800">
+                      <div>
+                        <div class="font-bold text-forest-900">UPI Instant Pay</div>
+                        <div class="text-[11px] text-gray-500">Google Pay, PhonePe, Paytm, CRED UPI</div>
+                      </div>
+                    </div>
+                    <span class="text-xs bg-blush-100 text-blush-700 font-bold px-2 py-0.5 rounded">Fastest</span>
+                  </label>
+
+                  <label class="flex items-center justify-between p-3 rounded-xl border border-kraft-200 hover:border-forest-600 cursor-pointer">
+                    <div class="flex items-center gap-2.5">
+                      <input type="radio" name="paymentOption" value="Card" class="text-forest-800 focus:ring-forest-800">
+                      <div>
+                        <div class="font-bold text-forest-900">Credit / Debit Card</div>
+                        <div class="text-[11px] text-gray-500">Visa, Mastercard, RuPay, Amex</div>
+                      </div>
+                    </div>
+                    <span class="text-[11px] text-gray-400">All Indian Banks</span>
+                  </label>
+
+                  <label class="flex items-center justify-between p-3 rounded-xl border border-kraft-200 hover:border-forest-600 cursor-pointer">
+                    <div class="flex items-center gap-2.5">
+                      <input type="radio" name="paymentOption" value="COD" class="text-forest-800 focus:ring-forest-800">
+                      <div>
+                        <div class="font-bold text-forest-900">Cash / Pay on Delivery</div>
+                        <div class="text-[11px] text-gray-500">Pay via cash or UPI scan upon arrival</div>
+                      </div>
+                    </div>
+                    <span class="text-[11px] text-emerald-700 font-medium">Available</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Order Review & Pricing Summary -->
+            <div class="lg:col-span-5 space-y-5">
+              
+              <div class="bg-white rounded-2xl p-5 border border-kraft-200 shadow-xs space-y-4">
+                <div class="flex items-center justify-between border-b border-kraft-100 pb-3">
+                  <h3 class="font-bold text-forest-900 text-base">Order Review</h3>
+                  <span id="checkoutItemCount" class="text-xs bg-forest-100 text-forest-800 px-2 py-0.5 rounded-full font-bold">1 item</span>
+                </div>
+
+                <!-- Checkout Items List -->
+                <div id="checkoutItemsList" class="space-y-2.5 max-h-52 overflow-y-auto pr-1 text-xs sm:text-sm">
+                  <!-- Populated dynamically -->
+                </div>
+
+                <!-- Coupon Section -->
+                <div class="pt-2 border-t border-kraft-100">
+                  <div class="flex gap-2">
+                    <input id="checkoutCouponInput" type="text" placeholder="Promo code (CRUNCH15)" class="w-full text-xs uppercase border border-kraft-200 rounded-lg px-3 py-2 focus:outline-none focus:border-forest-600 bg-kraft-50">
+                    <button id="applyCouponBtn" type="button" class="bg-forest-800 hover:bg-forest-700 text-white text-xs font-bold px-3 py-2 rounded-lg transition shrink-0">
+                      Apply
+                    </button>
+                  </div>
+                  <div id="couponStatusMsg" class="text-[11px] mt-1.5 hidden"></div>
+                </div>
+
+                <!-- Price Breakdown Bill -->
+                <div class="border-t border-kraft-100 pt-3 space-y-2 text-xs sm:text-sm">
+                  <div class="flex items-center justify-between text-gray-600">
+                    <span>Items Subtotal</span>
+                    <span id="billSubtotal">₹89</span>
+                  </div>
+                  <div class="flex items-center justify-between text-gray-600">
+                    <span class="flex items-center gap-1">
+                      <span>Delivery Fee</span>
+                      <span id="billPlatformLabel" class="text-[10px] bg-forest-100 text-forest-800 px-1.5 py-0.2 rounded font-medium">(Zepto)</span>
+                    </span>
+                    <span id="billDeliveryFee" class="font-medium text-forest-900">₹15</span>
+                  </div>
+                  <div class="flex items-center justify-between text-gray-600">
+                    <span>Eco-Kraft Packaging &amp; Handling</span>
+                    <span>₹5</span>
+                  </div>
+                  <div id="discountRow" class="flex items-center justify-between text-emerald-700 hidden">
+                    <span>Discount (CRUNCH15 - 15%)</span>
+                    <span id="billDiscount">-₹13</span>
+                  </div>
+                  <div class="border-t border-kraft-200 pt-3 flex items-center justify-between font-bold text-forest-900 text-base">
+                    <span>Total Payable</span>
+                    <span id="billFinalTotal" class="text-xl text-forest-900">₹109</span>
+                  </div>
+                </div>
+
+                <!-- Final Place Order Button -->
+                <button id="placeOrderFinalBtn" type="button" class="w-full bg-forest-800 hover:bg-forest-700 text-white font-extrabold py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2 text-sm sm:text-base">
+                  <span id="placeOrderBtnText">Place Order via Zepto · ₹109</span>
+                  <span>&rarr;</span>
+                </button>
+
+                <!-- Assurance Badges -->
+                <div class="pt-2 text-center space-y-1.5">
+                  <div class="text-[11px] text-gray-500 flex items-center justify-center gap-2 flex-wrap">
+                    <span>✓ 100% Roasted Ancient Grains</span>
+                    <span>·</span>
+                    <span>✓ Zero Palm Oil</span>
+                    <span>·</span>
+                    <span>✓ Freshness Seal</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Order Success View (Replaces form upon placing order) -->
+        <div id="orderSuccessView" class="hidden p-8 sm:p-12 text-center space-y-6">
+          <div class="w-20 h-20 rounded-full bg-emerald-100 text-emerald-700 text-4xl flex items-center justify-center mx-auto shadow-inner animate-bounce">
+            ✓
+          </div>
+          
+          <div class="space-y-2 max-w-lg mx-auto">
+            <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-3 py-1 rounded-full uppercase tracking-wider">Order Confirmed</span>
+            <h2 class="text-2xl sm:text-4xl font-serif font-bold text-forest-900">Thank You for Your Order!</h2>
+            <p class="text-sm text-gray-600">
+              Your order <strong id="successOrderId" class="text-forest-900 font-mono">#RR-78219</strong> has been successfully placed and routed to <strong id="successPartnerName" class="text-forest-900">Zepto</strong> for rapid fulfillment.
+            </p>
+          </div>
+
+          <!-- Order Status Stepper -->
+          <div class="max-w-xl mx-auto bg-white rounded-2xl p-5 border border-kraft-200 shadow-xs text-left">
+            <div class="flex items-center justify-between text-xs font-semibold text-gray-500 mb-3 border-b border-kraft-100 pb-2">
+              <span>Estimated Delivery: <strong id="successEta" class="text-emerald-700 font-bold">10 mins</strong></span>
+              <span>Paid via: <strong id="successPayment" class="text-forest-900 font-bold">UPI Instant Pay</strong></span>
+            </div>
+            
+            <div class="space-y-3 py-2 text-xs">
+              <div class="flex items-center gap-3">
+                <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">✓</span>
+                <span class="font-medium text-forest-900">Order Received &amp; Verified</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">✓</span>
+                <span class="font-medium text-forest-900">Partner Store Picking &amp; Packing Bags</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-5 h-5 rounded-full bg-blush-500 text-white flex items-center justify-center text-[10px] animate-pulse">●</span>
+                <span class="font-semibold text-blush-700">Rider Dispatching to Delivery Address</span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-kraft-100 text-xs text-gray-600">
+              <strong>Delivering to:</strong> <span id="successAddress">Flat 402, Greenwoods Residency, 14th Main Rd, Indiranagar, Bengaluru</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <button id="finishCheckoutBtn" type="button" class="w-full sm:w-auto bg-forest-800 hover:bg-forest-700 text-white font-bold px-8 py-3.5 rounded-xl transition shadow">
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -699,7 +1029,7 @@
     </div>
   </footer>
 
-  <!-- Interactive Scripts for Pouch Selector & Bag of Goods -->
+  <!-- Interactive Scripts for Pouch Selector, Bag of Goods & Checkout -->
   <script>
     const packPrices = {
       trial: { price: 39, label: 'Trial Pouch (35g)' },
@@ -708,6 +1038,21 @@
     };
     let selectedPack = 'core';
     let cart = [{ name: 'Jowar Puffs - Peri Peri (Core Retail Pouch 90g)', price: 89 }];
+    
+    // Checkout State
+    let selectedPartner = 'zepto';
+    let partnerFee = 15;
+    let partnerEta = '10 mins';
+    let partnerName = 'Zepto';
+    let couponDiscount = 0;
+    let isCouponApplied = false;
+
+    // Delivery Platform configurations
+    const platformData = {
+      zepto: { name: 'Zepto', fee: 15, eta: '10 mins' },
+      blinkit: { name: 'Blinkit', fee: 15, eta: '12 mins' },
+      amazon: { name: 'Amazon', fee: 0, eta: 'Today by 7:00 PM' }
+    };
 
     // Pack selector buttons
     document.querySelectorAll('.hero-pack-btn').forEach(btn => {
@@ -726,11 +1071,15 @@
       });
     });
 
+    function calculateCartTotal() {
+      return cart.reduce((sum, item) => sum + item.price, 0);
+    }
+
     function renderCart() {
       const list = document.getElementById('cartItemsList');
       const badge = document.getElementById('cartCountBadge');
       const totalEl = document.getElementById('cartTotal');
-      badge.textContent = cart.length;
+      if (badge) badge.textContent = cart.length;
 
       if (cart.length === 0) {
         list.innerHTML = '<p class="text-gray-500 text-center py-6">Your Bag of Goods is empty.</p>';
@@ -738,13 +1087,12 @@
         return;
       }
 
-      let total = 0;
+      const total = calculateCartTotal();
       list.innerHTML = cart.map((item, idx) => {
-        total += item.price;
         return `
           <div class="flex items-center justify-between bg-white p-3 rounded-lg border border-kraft-200">
             <div>
-              <div class="font-bold text-forest-900">${item.name}</div>
+              <div class="font-bold text-forest-900 text-xs sm:text-sm">${item.name}</div>
             </div>
             <div class="flex items-center gap-2">
               <span class="font-bold text-forest-800">₹${item.price}</span>
@@ -770,6 +1118,186 @@
       renderCart();
     }
 
+    // Checkout Rendering & Logic
+    function updateCheckoutBill() {
+      const subtotal = calculateCartTotal();
+      const packagingFee = 5;
+      
+      // Amazon has 0 delivery fee; Zepto is free over ₹99, else ₹15; Blinkit is ₹15
+      let activeFee = platformData[selectedPartner].fee;
+      if (selectedPartner === 'zepto' && subtotal >= 99) {
+        activeFee = 0;
+      }
+      partnerFee = activeFee;
+
+      let discount = 0;
+      if (isCouponApplied) {
+        discount = Math.round(subtotal * 0.15);
+      }
+      couponDiscount = discount;
+
+      const finalTotal = Math.max(0, subtotal + partnerFee + packagingFee - couponDiscount);
+
+      // DOM Updates
+      document.getElementById('billSubtotal').textContent = '₹' + subtotal;
+      document.getElementById('billPlatformLabel').textContent = `(${platformData[selectedPartner].name})`;
+      document.getElementById('billDeliveryFee').textContent = partnerFee === 0 ? 'FREE' : '₹' + partnerFee;
+      
+      const discountRow = document.getElementById('discountRow');
+      if (couponDiscount > 0) {
+        discountRow.classList.remove('hidden');
+        document.getElementById('billDiscount').textContent = '-₹' + couponDiscount;
+      } else {
+        discountRow.classList.add('hidden');
+      }
+
+      document.getElementById('billFinalTotal').textContent = '₹' + finalTotal;
+      document.getElementById('placeOrderBtnText').textContent = `Place Order via ${platformData[selectedPartner].name} · ₹${finalTotal}`;
+    }
+
+    function renderCheckoutItems() {
+      const list = document.getElementById('checkoutItemsList');
+      const countBadge = document.getElementById('checkoutItemCount');
+      countBadge.textContent = `${cart.length} item${cart.length === 1 ? '' : 's'}`;
+
+      if (cart.length === 0) {
+        list.innerHTML = '<p class="text-gray-500 py-3 text-center">Your bag is empty. Please add items to order.</p>';
+        return;
+      }
+
+      list.innerHTML = cart.map(item => `
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-kraft-50 border border-kraft-200">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">🌾</span>
+            <div class="font-medium text-forest-900 leading-tight">${item.name}</div>
+          </div>
+          <div class="font-bold text-forest-800 ml-2">₹${item.price}</div>
+        </div>
+      `).join('');
+    }
+
+    function openCheckout() {
+      if (cart.length === 0) {
+        // Provide default starter item if bag is empty
+        cart.push({ name: 'Jowar Puffs - Peri Peri (Core Retail Pouch 90g)', price: 89 });
+        renderCart();
+      }
+      document.getElementById('cartDrawer').classList.add('hidden');
+      document.getElementById('checkoutMainView').classList.remove('hidden');
+      document.getElementById('orderSuccessView').classList.add('hidden');
+      renderCheckoutItems();
+      updateCheckoutBill();
+      document.getElementById('checkoutModal').classList.remove('hidden');
+    }
+
+    function closeCheckout() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+    }
+
+    // Platform selection radio/card interactions
+    document.querySelectorAll('.delivery-option-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const platform = card.getAttribute('data-platform');
+        selectedPartner = platform;
+        
+        // Highlight active card
+        document.querySelectorAll('.delivery-option-card').forEach(c => {
+          c.classList.remove('border-2', 'border-forest-800', 'bg-forest-50/40');
+          c.classList.add('border', 'border-kraft-200', 'bg-white');
+          const radio = c.querySelector('input[type="radio"]');
+          if (radio) radio.checked = false;
+        });
+
+        card.classList.remove('border', 'border-kraft-200', 'bg-white');
+        card.classList.add('border-2', 'border-forest-800', 'bg-forest-50/40');
+        const activeRadio = card.querySelector('input[type="radio"]');
+        if (activeRadio) activeRadio.checked = true;
+
+        updateCheckoutBill();
+      });
+    });
+
+    // Coupon Code Apply Handler
+    document.getElementById('applyCouponBtn').addEventListener('click', () => {
+      const code = document.getElementById('checkoutCouponInput').value.trim().toUpperCase();
+      const statusMsg = document.getElementById('couponStatusMsg');
+      statusMsg.classList.remove('hidden');
+
+      if (code === 'CRUNCH15') {
+        isCouponApplied = true;
+        statusMsg.className = 'text-[11px] mt-1.5 text-emerald-700 font-bold';
+        statusMsg.textContent = '✓ Code CRUNCH15 applied! 15% discount deducted.';
+        updateCheckoutBill();
+      } else if (code === '') {
+        statusMsg.className = 'text-[11px] mt-1.5 text-amber-700';
+        statusMsg.textContent = 'Please enter a valid coupon code.';
+      } else {
+        isCouponApplied = false;
+        statusMsg.className = 'text-[11px] mt-1.5 text-red-600';
+        statusMsg.textContent = 'Invalid promo code. Try CRUNCH15 for 15% off.';
+        updateCheckoutBill();
+      }
+    });
+
+    // Editable Address Logic
+    const toggleEditBtn = document.getElementById('toggleEditAddressBtn');
+    const addressDisplay = document.getElementById('addressDisplayCard');
+    const addressForm = document.getElementById('addressEditForm');
+
+    toggleEditBtn.addEventListener('click', () => {
+      addressForm.classList.toggle('hidden');
+    });
+
+    document.getElementById('cancelEditAddressBtn').addEventListener('click', () => {
+      addressForm.classList.add('hidden');
+    });
+
+    document.getElementById('saveAddressBtn').addEventListener('click', () => {
+      const name = document.getElementById('editNameInput').value;
+      const phone = document.getElementById('editPhoneInput').value;
+      const street = document.getElementById('editAddressInput').value;
+      const city = document.getElementById('editCityInput').value;
+      const pincode = document.getElementById('editPincodeInput').value;
+
+      document.getElementById('displayRecipientName').textContent = name;
+      document.getElementById('displayRecipientPhone').textContent = phone;
+      document.getElementById('displayFullAddress').textContent = `${street}, ${city} — ${pincode}`;
+      addressForm.classList.add('hidden');
+    });
+
+    // Place Order Final Action
+    document.getElementById('placeOrderFinalBtn').addEventListener('click', () => {
+      const selectedPayment = document.querySelector('input[name="paymentOption"]:checked')?.value || 'UPI';
+      const randomOrderId = 'RR-' + Math.floor(10000 + Math.random() * 90000);
+      const deliveryAddress = document.getElementById('displayFullAddress').textContent;
+
+      document.getElementById('successOrderId').textContent = '#' + randomOrderId;
+      document.getElementById('successPartnerName').textContent = platformData[selectedPartner].name;
+      document.getElementById('successEta').textContent = platformData[selectedPartner].eta;
+      document.getElementById('successPayment').textContent = selectedPayment === 'COD' ? 'Cash on Delivery' : selectedPayment === 'Card' ? 'Credit/Debit Card' : 'UPI Instant Pay';
+      document.getElementById('successAddress').textContent = deliveryAddress;
+
+      // Switch view to success
+      document.getElementById('checkoutMainView').classList.add('hidden');
+      document.getElementById('orderSuccessView').classList.remove('hidden');
+
+      // Clear cart
+      cart = [];
+      renderCart();
+    });
+
+    // Finish checkout / Continue shopping
+    document.getElementById('finishCheckoutBtn').addEventListener('click', () => {
+      closeCheckout();
+    });
+
+    // Drawer and Modal Open/Close Event Listeners
+    document.getElementById('proceedToCheckoutBtn').addEventListener('click', openCheckout);
+    document.getElementById('closeCheckoutBtn').addEventListener('click', closeCheckout);
+    document.getElementById('quickCommBtn').addEventListener('click', () => {
+      openCheckout();
+    });
+
     document.getElementById('openCartBtn').addEventListener('click', () => {
       document.getElementById('cartDrawer').classList.remove('hidden');
     });
@@ -779,6 +1307,9 @@
     document.getElementById('cartBackdrop').addEventListener('click', () => {
       document.getElementById('cartDrawer').classList.add('hidden');
     });
+
+    // Initial Cart Render
+    renderCart();
   </script>
 </body>
 
