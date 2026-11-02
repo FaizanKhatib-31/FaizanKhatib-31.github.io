@@ -1,0 +1,4221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comicpedia — Diwali Mega Sale, Corporate Gifting &amp; Collector Waitlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #090D16;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+
+    /* TOP MENU TO SWITCH BETWEEN THE 3 PAGES (LINKS ONLY, NO BACK BUTTON) */
+    .site-switcher {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #090D16;
+      border-bottom: 3px solid #FFB703;
+      padding: 10px 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .site-switcher-nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .site-switcher-nav a {
+      display: inline-block;
+      font-family: 'Bangers', cursive;
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      color: #F8FAFC;
+      background: #1E293B;
+      border: 2px solid #FFB703;
+      padding: 7px 18px;
+      box-shadow: 3px 3px 0 #E63946;
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+
+    .site-switcher-nav a:hover,
+    .site-switcher-nav a:focus-visible {
+      background: #FFB703;
+      color: #090D16;
+      transform: translate(-2px, -2px);
+    }
+
+    /* PURE HTML/CSS PAGE SWITCHING VIA :target AND :has(:target) */
+    .site-page {
+      display: none;
+      min-height: calc(100vh - 54px);
+    }
+
+    .site-page:target,
+    .site-page:has(:target) {
+      display: block;
+    }
+
+    /* Default to Page 1 (Diwali Mega Sale) when no hash is targeted */
+    body:not(:has(.site-page:target, .site-page :target)) #diwali-mega-sale {
+      display: block;
+    }
+
+    /* Active link state in top menu */
+    body:not(:has(.site-page:target, .site-page :target)) .site-switcher-nav a[href="#diwali-mega-sale"],
+    body:has(#diwali-mega-sale:target, #diwali-mega-sale :target) .site-switcher-nav a[href="#diwali-mega-sale"],
+    body:has(#corporate-diwali-gifting:target, #corporate-diwali-gifting :target) .site-switcher-nav a[href="#corporate-diwali-gifting"],
+    body:has(#superman-collector-waitlist:target, #superman-collector-waitlist :target) .site-switcher-nav a[href="#superman-collector-waitlist"] {
+      background: #FFB703;
+      color: #090D16;
+      box-shadow: 3px 3px 0 #FFFFFF;
+    }
+
+    /* Offset each page's sticky topbar so it sits neatly below the page switcher */
+    #diwali-mega-sale .topbar,
+    #corporate-diwali-gifting .topbar,
+    #superman-collector-waitlist .topbar {
+      top: 53px;
+    }
+
+    .site-page,
+    #top-sale,
+    #top-corporate,
+    #top-waitlist {
+      scroll-margin-top: 56px;
+    }
+
+    #bundles,
+    #catalog,
+    #gift-boxes,
+    #enquiry-form,
+    #waitlist-form {
+      scroll-margin-top: 120px;
+    }
+
+    /* ================= PAGE 1: DIWALI MEGA SALE STYLES ================= */
+#diwali-mega-sale {
+      --bg-deep: #1A0926;
+      --bg-maroon: #3B0D3A;
+      --bg-card: #FFFDF7;
+      --bg-cream: #FFF6E0;
+      --gold: #FFB703;
+      --gold-bright: #FFD166;
+      --crimson: #E63946;
+      --crimson-dark: #B81D2A;
+      --ink: #14081C;
+      --text-light: #FFFDF7;
+      --text-muted: #E2CFEA;
+      --border-comic: 3px solid #14081C;
+      --shadow-comic: 5px 5px 0px #14081C;
+      --shadow-gold: 5px 5px 0px #FFB703;
+    }
+#diwali-mega-sale *, #diwali-mega-sale *::before, #diwali-mega-sale *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+#diwali-mega-sale {
+      scroll-behavior: smooth;
+    }
+#diwali-mega-sale {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-deep);
+      background-image:
+        radial-gradient(rgba(255, 183, 3, 0.11) 1.5px, transparent 1.5px),
+        linear-gradient(165deg, #1A0926 0%, #3B0D3A 55%, #1F082B 100%);
+      background-size: 20px 20px, 100% 100%;
+      color: var(--text-light);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+#diwali-mega-sale .comic-font {
+      font-family: 'Bangers', cursive;
+      letter-spacing: 0.04em;
+    }
+#diwali-mega-sale .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+#diwali-mega-sale .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(26, 9, 38, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 3px solid var(--gold);
+      padding: 12px 0;
+    }
+#diwali-mega-sale .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+#diwali-mega-sale .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+#diwali-mega-sale .brand-badge {
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.75rem;
+      line-height: 1;
+      padding: 6px 14px;
+      border: 2.5px solid #fff;
+      box-shadow: 3px 3px 0 var(--gold);
+      transform: rotate(-2deg);
+      letter-spacing: 0.06em;
+    }
+#diwali-mega-sale .brand-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-bright);
+      display: none;
+    }
+@media (min-width: 540px) {
+#diwali-mega-sale .brand-tag {
+        display: inline-block;
+      }
+
+    
+}
+#diwali-mega-sale .festive-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #FFB703, #FFD166);
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--crimson);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+#diwali-mega-sale .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--ink);
+      font-family: 'Bangers', cursive;
+      font-size: 1.4rem;
+      letter-spacing: 0.05em;
+      padding: 14px 28px;
+      border: var(--border-comic);
+      box-shadow: var(--shadow-comic);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      text-align: center;
+    }
+#diwali-mega-sale .btn-cta:hover, #diwali-mega-sale .btn-cta:focus-visible {
+      background: var(--gold-bright);
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0px var(--ink);
+    }
+#diwali-mega-sale .btn-cta:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px var(--ink);
+    }
+#diwali-mega-sale .btn-crimson {
+      background: var(--crimson);
+      color: #fff;
+    }
+#diwali-mega-sale .btn-crimson:hover, #diwali-mega-sale .btn-crimson:focus-visible {
+      background: #ff4757;
+      color: #fff;
+    }
+#diwali-mega-sale .hero {
+      padding: 36px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+#diwali-mega-sale .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+@media (min-width: 900px) {
+#diwali-mega-sale .hero {
+        padding: 56px 0 68px;
+      }
+#diwali-mega-sale .hero-grid {
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: 44px;
+      }
+
+    
+}
+#diwali-mega-sale .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 183, 3, 0.16);
+      border: 2px solid var(--gold);
+      color: var(--gold-bright);
+      padding: 6px 14px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+#diwali-mega-sale .hero-title {
+      font-size: clamp(2.4rem, 5.5vw, 4.3rem);
+      line-height: 1.03;
+      color: #fff;
+      text-shadow: 4px 4px 0px var(--ink);
+      margin-bottom: 16px;
+    }
+#diwali-mega-sale .hero-title span {
+      color: var(--gold);
+    }
+#diwali-mega-sale .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 580px;
+      margin-bottom: 24px;
+    }
+#diwali-mega-sale .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+#diwali-mega-sale .hero-perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+    }
+#diwali-mega-sale .hero-perks span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(20, 8, 28, 0.65);
+      padding: 6px 12px;
+      border: 1.5px solid rgba(255, 183, 3, 0.45);
+    }
+#diwali-mega-sale .hero-stage {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 350px;
+      padding: 20px 10px;
+    }
+#diwali-mega-sale .Burst-bg {
+      position: absolute;
+      width: 310px;
+      height: 310px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,183,3,0.35) 0%, rgba(230,57,70,0.18) 55%, transparent 75%);
+      filter: blur(8px);
+      z-index: 0;
+    }
+#diwali-mega-sale .fanned-cards {
+      position: relative;
+      width: 310px;
+      height: 310px;
+      z-index: 2;
+    }
+#diwali-mega-sale .fan-card {
+      position: absolute;
+      width: 165px;
+      height: 248px;
+      background: var(--bg-card);
+      border: 3px solid var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
+      overflow: hidden;
+      transition: transform 0.25s ease;
+      top: 26px;
+      left: 72px;
+    }
+#diwali-mega-sale .fan-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+#diwali-mega-sale .fan-card-1 {
+      transform: translateX(-68px) translateY(12px) rotate(-13deg);
+      z-index: 1;
+    }
+#diwali-mega-sale .fan-card-2 {
+      transform: translateY(-10px) scale(1.06);
+      z-index: 3;
+      border-color: var(--gold);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 0 3px var(--ink);
+    }
+#diwali-mega-sale .fan-card-3 {
+      transform: translateX(68px) translateY(12px) rotate(13deg);
+      z-index: 2;
+    }
+#diwali-mega-sale .fanned-cards:hover .fan-card-1 {
+      transform: translateX(-82px) translateY(6px) rotate(-17deg);
+    }
+#diwali-mega-sale .fanned-cards:hover .fan-card-2 {
+      transform: translateY(-18px) scale(1.09);
+    }
+#diwali-mega-sale .fanned-cards:hover .fan-card-3 {
+      transform: translateX(82px) translateY(6px) rotate(17deg);
+    }
+#diwali-mega-sale .diya-float {
+      position: absolute;
+      bottom: -8px;
+      right: 12px;
+      z-index: 5;
+      background: var(--ink);
+      border: 2.5px solid var(--gold);
+      padding: 8px 14px;
+      box-shadow: 4px 4px 0 var(--crimson);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      color: var(--gold-bright);
+    }
+#diwali-mega-sale .sticker-burst {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      z-index: 5;
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.25rem;
+      padding: 10px 14px;
+      border: 2.5px solid #fff;
+      box-shadow: 4px 4px 0 var(--ink);
+      transform: rotate(-8deg);
+      line-height: 1.05;
+      text-align: center;
+    }
+#diwali-mega-sale .countdown-section {
+      margin: 8px 0 44px;
+    }
+#diwali-mega-sale .countdown-box {
+      background: linear-gradient(90deg, #2B0930 0%, #4A0E3D 50%, #2B0930 100%);
+      border: 3px solid var(--gold);
+      box-shadow: 6px 6px 0 var(--ink);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      text-align: center;
+    }
+@media (min-width: 768px) {
+#diwali-mega-sale .countdown-box {
+        flex-direction: row;
+        text-align: left;
+      }
+
+    
+}
+#diwali-mega-sale .countdown-label h2 {
+      font-size: 1.75rem;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+#diwali-mega-sale .countdown-label p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+#diwali-mega-sale .timer-grid {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+#diwali-mega-sale .time-cell {
+      background: var(--ink);
+      border: 2.5px solid var(--gold);
+      min-width: 68px;
+      padding: 8px 10px;
+      text-align: center;
+      box-shadow: 3px 3px 0 var(--crimson);
+    }
+#diwali-mega-sale .time-val {
+      font-family: 'Bangers', cursive;
+      font-size: 2rem;
+      line-height: 1;
+      color: #fff;
+      display: block;
+    }
+#diwali-mega-sale .time-unit {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      letter-spacing: 0.06em;
+    }
+#diwali-mega-sale .section-head {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+#diwali-mega-sale .section-tag {
+      display: inline-block;
+      background: var(--crimson);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border: 2px solid #fff;
+      margin-bottom: 10px;
+    }
+#diwali-mega-sale .section-title {
+      font-size: clamp(2rem, 4.2vw, 3.1rem);
+      color: var(--gold);
+      text-shadow: 3px 3px 0 var(--ink);
+      line-height: 1.08;
+      margin-bottom: 8px;
+    }
+#diwali-mega-sale .section-sub {
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 0.98rem;
+    }
+#diwali-mega-sale .offer-trio {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-bottom: 44px;
+    }
+@media (min-width: 768px) {
+#diwali-mega-sale .offer-trio {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    
+}
+#diwali-mega-sale .offer-pill-card {
+      background: var(--bg-cream);
+      color: var(--ink);
+      border: var(--border-comic);
+      box-shadow: var(--shadow-gold);
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+#diwali-mega-sale .offer-num {
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.6rem;
+      min-width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2.5px solid var(--ink);
+      flex-shrink: 0;
+    }
+#diwali-mega-sale .offer-pill-card h3 {
+      font-family: 'Bangers', cursive;
+      font-size: 1.35rem;
+      line-height: 1.15;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+#diwali-mega-sale .offer-pill-card p {
+      font-size: 0.88rem;
+      color: #3a2344;
+      font-weight: 600;
+    }
+#diwali-mega-sale .bundles-section {
+      padding: 28px 0 56px;
+    }
+#diwali-mega-sale .bundles-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+@media (min-width: 900px) {
+#diwali-mega-sale .bundles-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    
+}
+#diwali-mega-sale .bundle-card {
+      background: var(--bg-card);
+      color: var(--ink);
+      border: var(--border-comic);
+      box-shadow: 7px 7px 0 var(--gold);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+#diwali-mega-sale .bundle-card:hover {
+      transform: translateY(-4px);
+    }
+#diwali-mega-sale .bundle-ribbon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.1rem;
+      padding: 4px 12px;
+      border: 2px solid var(--ink);
+      z-index: 4;
+    }
+#diwali-mega-sale .bundle-stage {
+      background: linear-gradient(145deg, #2D0B38 0%, #4C1248 100%);
+      padding: 28px 16px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 215px;
+      border-bottom: var(--border-comic);
+      position: relative;
+    }
+#diwali-mega-sale .bundle-covers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+#diwali-mega-sale .bundle-covers .mini-cover {
+      width: 105px;
+      height: 156px;
+      border: 2.5px solid #fff;
+      box-shadow: 4px 4px 0 var(--ink);
+      overflow: hidden;
+      background: #222;
+      flex-shrink: 0;
+    }
+#diwali-mega-sale .bundle-covers .mini-cover:not(:first-child) {
+      margin-left: -26px;
+    }
+#diwali-mega-sale .bundle-covers .mini-cover:nth-child(1) {
+      transform: rotate(-6deg);
+    }
+#diwali-mega-sale .bundle-covers .mini-cover:nth-child(2) {
+      transform: translateY(-6px) rotate(3deg);
+      z-index: 2;
+    }
+#diwali-mega-sale .bundle-covers .mini-cover:nth-child(3) {
+      transform: rotate(9deg);
+      z-index: 3;
+    }
+#diwali-mega-sale .bundle-covers img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+#diwali-mega-sale .bundle-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+#diwali-mega-sale .bundle-title {
+      font-size: 1.65rem;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.1;
+    }
+#diwali-mega-sale .bundle-list {
+      list-style: none;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #2f1a38;
+    }
+#diwali-mega-sale .bundle-list li {
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(20, 8, 28, 0.2);
+    }
+#diwali-mega-sale .bundle-price-box {
+      margin-top: auto;
+      background: var(--bg-cream);
+      border: 2px solid var(--ink);
+      padding: 12px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+#diwali-mega-sale .price-mrp {
+      text-decoration: line-through;
+      color: #7a5c85;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+#diwali-mega-sale .price-sale {
+      font-family: 'Bangers', cursive;
+      font-size: 2rem;
+      color: var(--crimson);
+      line-height: 1;
+    }
+#diwali-mega-sale .save-pill {
+      background: #16a34a;
+      color: #fff;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border: 1.5px solid var(--ink);
+    }
+#diwali-mega-sale .coupon-section {
+      padding: 12px 0 56px;
+    }
+#diwali-mega-sale .coupon-banner {
+      background: linear-gradient(135deg, #FFB703 0%, #FFD166 100%);
+      color: var(--ink);
+      border: 3.5px solid var(--ink);
+      box-shadow: 8px 8px 0 var(--crimson);
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      text-align: center;
+    }
+@media (min-width: 820px) {
+#diwali-mega-sale .coupon-banner {
+        flex-direction: row;
+        text-align: left;
+        padding: 30px 36px;
+      }
+
+    
+}
+#diwali-mega-sale .coupon-info h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      line-height: 1.08;
+      margin-bottom: 6px;
+    }
+#diwali-mega-sale .coupon-info p {
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: #2c1338;
+    }
+#diwali-mega-sale .coupon-Interactive {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+#diwali-mega-sale .coupon-code-box {
+      background: #fff;
+      border: 3px dashed var(--crimson);
+      padding: 10px 20px;
+      font-family: 'Bangers', cursive;
+      font-size: 1.8rem;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      user-select: all;
+    }
+#diwali-mega-sale .copy-btn {
+      background: var(--ink);
+      color: var(--gold);
+      font-family: 'Bangers', cursive;
+      font-size: 1.35rem;
+      letter-spacing: 0.05em;
+      padding: 12px 22px;
+      border: 3px solid var(--ink);
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+#diwali-mega-sale .copy-btn:hover {
+      background: var(--crimson);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+#diwali-mega-sale .copy-status {
+      width: 100%;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--ink);
+      min-height: 1.2em;
+      text-align: center;
+    }
+#diwali-mega-sale .catalog-section {
+      padding: 16px 0 64px;
+    }
+#diwali-mega-sale .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+#diwali-mega-sale .filter-pill {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 2.5px solid var(--gold);
+      padding: 9px 18px;
+      font-family: 'Bangers', cursive;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+#diwali-mega-sale .filter-pill:hover, #diwali-mega-sale .filter-pill.active {
+      background: var(--gold);
+      color: var(--ink);
+      box-shadow: 4px 4px 0 var(--crimson);
+      transform: translate(-2px, -2px);
+    }
+#diwali-mega-sale .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+@media (min-width: 560px) {
+#diwali-mega-sale .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    
+}
+@media (min-width: 960px) {
+#diwali-mega-sale .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+    
+}
+#diwali-mega-sale .product-card {
+      background: var(--bg-card);
+      color: var(--ink);
+      border: var(--border-comic);
+      box-shadow: 5px 5px 0 var(--ink);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+#diwali-mega-sale .product-card:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 8px 8px 0 var(--gold);
+    }
+#diwali-mega-sale .product-card[hidden] {
+      display: none !important;
+    }
+#diwali-mega-sale .prod-img-wrap {
+      position: relative;
+      height: 260px;
+      background: #230c2e;
+      border-bottom: var(--border-comic);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+#diwali-mega-sale .prod-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+#diwali-mega-sale .product-card:hover .prod-img-wrap img {
+      transform: scale(1.05);
+    }
+#diwali-mega-sale .cat-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--ink);
+      color: var(--gold-bright);
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border: 1.5px solid var(--gold);
+      z-index: 2;
+    }
+#diwali-mega-sale .disc-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1rem;
+      padding: 3px 9px;
+      border: 1.5px solid #fff;
+      z-index: 2;
+    }
+#diwali-mega-sale .prod-content {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+#diwali-mega-sale .prod-subcat {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #6b307a;
+      margin-bottom: 4px;
+    }
+#diwali-mega-sale .prod-title {
+      font-family: 'Bangers', cursive;
+      font-size: 1.4rem;
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+#diwali-mega-sale .prod-blurb {
+      font-size: 0.84rem;
+      color: #3c2a45;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+#diwali-mega-sale .prod-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+#diwali-mega-sale .prod-sale {
+      font-family: 'Bangers', cursive;
+      font-size: 1.7rem;
+      color: var(--crimson);
+    }
+#diwali-mega-sale .prod-reg {
+      font-size: 0.88rem;
+      text-decoration: line-through;
+      color: #7c6587;
+      font-weight: 700;
+    }
+#diwali-mega-sale .btn-shop-card {
+      width: 100%;
+      padding: 11px 16px;
+      font-size: 1.2rem;
+    }
+#diwali-mega-sale .comic-fallback {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #3B0D3A 0%, #14081C 100%);
+      color: var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+      border: 3px inset var(--gold);
+    }
+#diwali-mega-sale .comic-fallback .fb-logo {
+      font-family: 'Bangers', cursive;
+      font-size: 0.85rem;
+      background: var(--crimson);
+      color: #fff;
+      padding: 2px 8px;
+      margin-bottom: 8px;
+    }
+#diwali-mega-sale .comic-fallback .fb-title {
+      font-family: 'Bangers', cursive;
+      font-size: 1.25rem;
+      line-height: 1.15;
+      color: #fff;
+    }
+#diwali-mega-sale .trust-footer {
+      background: #12051B;
+      border-top: 4px solid var(--gold);
+      padding: 48px 0 36px;
+      text-align: center;
+    }
+#diwali-mega-sale .trust-strip {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+@media (min-width: 768px) {
+#diwali-mega-sale .trust-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    
+}
+#diwali-mega-sale .trust-item {
+      background: rgba(255, 183, 3, 0.08);
+      border: 2px solid rgba(255, 183, 3, 0.4);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+#diwali-mega-sale .trust-item h3 {
+      font-family: 'Bangers', cursive;
+      font-size: 1.4rem;
+      color: var(--gold);
+    }
+#diwali-mega-sale .trust-item p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+#diwali-mega-sale .final-cta-box {
+      background: linear-gradient(135deg, #3B0D3A 0%, #1F082B 100%);
+      border: 3px solid var(--gold);
+      box-shadow: 6px 6px 0 var(--crimson);
+      padding: 32px 20px;
+      max-width: 780px;
+      margin: 0 auto 28px;
+    }
+#diwali-mega-sale .final-cta-box h2 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: #fff;
+      margin-bottom: 10px;
+    }
+#diwali-mega-sale .final-cta-box p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+#diwali-mega-sale .copyright-line {
+      font-size: 0.8rem;
+      color: #9b7da8;
+    }
+
+    /* ================= PAGE 2: CORPORATE DIWALI GIFTING STYLES ================= */
+#corporate-diwali-gifting {
+      --slate-deep: #0F172A;
+      --slate-card: #1E293B;
+      --ivory: #FFFBEB;
+      --ivory-soft: #FEF3C7;
+      --gold: #F59E0B;
+      --gold-dark: #D97706;
+      --crimson: #E63946;
+      --ink: #090D16;
+      --text-light: #F8FAFC;
+      --text-muted: #CBD5E1;
+      --border-panel: 2.5px solid #090D16;
+      --shadow-panel: 5px 5px 0px #090D16;
+      --shadow-gold: 5px 5px 0px #D97706;
+    }
+#corporate-diwali-gifting *, #corporate-diwali-gifting *::before, #corporate-diwali-gifting *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+#corporate-diwali-gifting {
+      scroll-behavior: smooth;
+    }
+#corporate-diwali-gifting {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--slate-deep);
+      background-image:
+        radial-gradient(rgba(245, 158, 11, 0.1) 1.5px, transparent 1.5px),
+        linear-gradient(180deg, #0F172A 0%, #172036 60%, #0F172A 100%);
+      background-size: 22px 22px, 100% 100%;
+      color: var(--text-light);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+#corporate-diwali-gifting .comic-font {
+      font-family: 'Bangers', cursive;
+      letter-spacing: 0.04em;
+    }
+#corporate-diwali-gifting .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+#corporate-diwali-gifting .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 3px solid var(--gold);
+      padding: 12px 0;
+    }
+#corporate-diwali-gifting .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+#corporate-diwali-gifting .brand-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+#corporate-diwali-gifting .brand-logo {
+      background: var(--gold);
+      color: var(--ink);
+      font-family: 'Bangers', cursive;
+      font-size: 1.65rem;
+      padding: 5px 14px;
+      border: 2.5px solid #fff;
+      box-shadow: 3px 3px 0 var(--crimson);
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+#corporate-diwali-gifting .brand-sub {
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ivory-soft);
+      border-left: 2px solid rgba(245, 158, 11, 0.5);
+      padding-left: 10px;
+    }
+#corporate-diwali-gifting .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+      color: var(--ink);
+      font-family: 'Bangers', cursive;
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      padding: 12px 24px;
+      border: 2.5px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+#corporate-diwali-gifting .btn-gold:hover, #corporate-diwali-gifting .btn-gold:focus-visible {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--crimson);
+    }
+#corporate-diwali-gifting .btn-gold-sm {
+      font-size: 1.05rem;
+      padding: 8px 16px;
+    }
+#corporate-diwali-gifting .hero {
+      padding: 40px 0 56px;
+    }
+#corporate-diwali-gifting .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+@media (min-width: 920px) {
+#corporate-diwali-gifting .hero {
+        padding: 58px 0 72px;
+      }
+#corporate-diwali-gifting .hero-grid {
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: 44px;
+      }
+
+    
+}
+#corporate-diwali-gifting .b2b-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1.5px solid var(--gold);
+      color: var(--ivory-soft);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+    }
+#corporate-diwali-gifting .hero-title {
+      font-size: clamp(2.25rem, 4.8vw, 3.85rem);
+      line-height: 1.05;
+      color: #fff;
+      text-shadow: 3px 3px 0 var(--ink);
+      margin-bottom: 16px;
+    }
+#corporate-diwali-gifting .hero-title span {
+      color: var(--gold);
+    }
+#corporate-diwali-gifting .hero-lead {
+      font-size: 1.06rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      max-width: 600px;
+    }
+#corporate-diwali-gifting .b2b-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+#corporate-diwali-gifting .b2b-badge {
+      background: var(--slate-card);
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      color: var(--ivory);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 7px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+#corporate-diwali-gifting .hero-vault {
+      background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%);
+      border: 3px solid var(--gold);
+      box-shadow: 8px 8px 0 var(--ink);
+      padding: 24px 20px;
+      position: relative;
+    }
+#corporate-diwali-gifting .vault-tag {
+      position: absolute;
+      top: -14px;
+      right: 18px;
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.05rem;
+      padding: 4px 12px;
+      border: 2px solid #fff;
+    }
+#corporate-diwali-gifting .vault-covers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+#corporate-diwali-gifting .vault-cover {
+      aspect-ratio: 2 / 3;
+      border: 2px solid var(--gold);
+      overflow: hidden;
+      background: #090D16;
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+#corporate-diwali-gifting .vault-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+#corporate-diwali-gifting .vault-caption {
+      background: var(--ivory);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      padding: 12px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+#corporate-diwali-gifting .trust-section {
+      padding: 36px 0 56px;
+      border-top: 2px solid rgba(245, 158, 11, 0.25);
+      border-bottom: 2px solid rgba(245, 158, 11, 0.25);
+      background: rgba(9, 13, 22, 0.55);
+    }
+#corporate-diwali-gifting .stats-strip {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+@media (min-width: 700px) {
+#corporate-diwali-gifting .stats-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    
+}
+#corporate-diwali-gifting .stat-box {
+      background: var(--slate-card);
+      border: 2px solid var(--gold);
+      padding: 16px 20px;
+      text-align: center;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+#corporate-diwali-gifting .stat-num {
+      font-family: 'Bangers', cursive;
+      font-size: 2.2rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+#corporate-diwali-gifting .stat-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+#corporate-diwali-gifting .client-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+#corporate-diwali-gifting .client-pill {
+      background: rgba(255, 251, 235, 0.06);
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      padding: 8px 18px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      color: var(--ivory-soft);
+      text-transform: uppercase;
+    }
+#corporate-diwali-gifting .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+@media (min-width: 860px) {
+#corporate-diwali-gifting .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    
+}
+#corporate-diwali-gifting .quote-card {
+      background: var(--ivory);
+      color: var(--ink);
+      border: var(--border-panel);
+      box-shadow: var(--shadow-gold);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+#corporate-diwali-gifting .quote-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1E293B;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+#corporate-diwali-gifting .quote-author {
+      border-top: 1.5px dashed rgba(9, 13, 22, 0.25);
+      padding-top: 10px;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+#corporate-diwali-gifting .quote-author span {
+      display: block;
+      font-weight: 600;
+      color: #475569;
+    }
+#corporate-diwali-gifting .section-head {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+#corporate-diwali-gifting .section-eyebrow {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border: 2px solid var(--ink);
+      margin-bottom: 10px;
+    }
+#corporate-diwali-gifting .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #fff;
+      text-shadow: 3px 3px 0 var(--ink);
+      line-height: 1.08;
+      margin-bottom: 8px;
+    }
+#corporate-diwali-gifting .section-sub {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 0.96rem;
+    }
+#corporate-diwali-gifting .boxes-section {
+      padding: 56px 0;
+    }
+#corporate-diwali-gifting .boxes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+@media (min-width: 940px) {
+#corporate-diwali-gifting .boxes-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    
+}
+#corporate-diwali-gifting .hamper-card {
+      background: var(--ivory);
+      color: var(--ink);
+      border: 3px solid var(--ink);
+      box-shadow: 7px 7px 0 var(--gold-dark);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+#corporate-diwali-gifting .hamper-card.popular {
+      border-color: var(--gold);
+      box-shadow: 9px 9px 0 var(--crimson);
+      transform: translateY(-4px);
+    }
+#corporate-diwali-gifting .popular-tag {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.1rem;
+      letter-spacing: 0.06em;
+      padding: 4px 16px;
+      border: 2px solid #fff;
+      white-space: nowrap;
+      z-index: 3;
+    }
+#corporate-diwali-gifting .hamper-preview {
+      background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%);
+      padding: 24px 14px 18px;
+      border-bottom: 3px solid var(--ink);
+      text-align: center;
+    }
+#corporate-diwali-gifting .hamper-thumbs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+#corporate-diwali-gifting .thumb-item {
+      width: 66px;
+      height: 98px;
+      border: 2px solid var(--gold);
+      overflow: hidden;
+      background: #090D16;
+      box-shadow: 3px 3px 0 var(--ink);
+      flex-shrink: 0;
+    }
+#corporate-diwali-gifting .thumb-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+#corporate-diwali-gifting .preview-note {
+      font-size: 0.75rem;
+      color: var(--ivory-soft);
+      font-weight: 700;
+    }
+#corporate-diwali-gifting .hamper-body {
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+#corporate-diwali-gifting .hamper-tier {
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--crimson);
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+#corporate-diwali-gifting .hamper-title {
+      font-size: 1.75rem;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+#corporate-diwali-gifting .hamper-price {
+      font-family: 'Bangers', cursive;
+      font-size: 1.65rem;
+      color: #B45309;
+      background: var(--ivory-soft);
+      border: 2px solid var(--ink);
+      padding: 6px 12px;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+#corporate-diwali-gifting .hamper-includes {
+      list-style: none;
+      margin-bottom: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #1E293B;
+      flex-grow: 1;
+    }
+#corporate-diwali-gifting .hamper-includes li {
+      padding: 6px 0;
+      border-bottom: 1px dashed rgba(15, 23, 42, 0.2);
+    }
+#corporate-diwali-gifting .btn-enquire-box {
+      width: 100%;
+      text-align: center;
+    }
+#corporate-diwali-gifting .custom-section {
+      padding: 48px 0;
+      background: rgba(30, 41, 59, 0.5);
+      border-top: 2px solid rgba(245, 158, 11, 0.25);
+      border-bottom: 2px solid rgba(245, 158, 11, 0.25);
+    }
+#corporate-diwali-gifting .custom-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+@media (min-width: 640px) {
+#corporate-diwali-gifting .custom-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    
+}
+@media (min-width: 980px) {
+#corporate-diwali-gifting .custom-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+    
+}
+#corporate-diwali-gifting .custom-card {
+      background: var(--slate-card);
+      border: 2.5px solid var(--gold);
+      box-shadow: 5px 5px 0 var(--ink);
+      padding: 20px;
+    }
+#corporate-diwali-gifting .custom-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--gold);
+      color: var(--ink);
+      font-family: 'Bangers', cursive;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #fff;
+      margin-bottom: 12px;
+    }
+#corporate-diwali-gifting .custom-card h3 {
+      font-family: 'Bangers', cursive;
+      font-size: 1.35rem;
+      color: var(--ivory);
+      margin-bottom: 6px;
+    }
+#corporate-diwali-gifting .custom-card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+#corporate-diwali-gifting .steps-section {
+      padding: 56px 0;
+    }
+#corporate-diwali-gifting .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+@media (min-width: 768px) {
+#corporate-diwali-gifting .steps-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+    
+}
+#corporate-diwali-gifting .step-card {
+      background: var(--ivory);
+      color: var(--ink);
+      border: 2.5px solid var(--ink);
+      box-shadow: 5px 5px 0 var(--gold);
+      padding: 20px;
+      position: relative;
+    }
+#corporate-diwali-gifting .step-badge {
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.15rem;
+      padding: 3px 10px;
+      border: 2px solid var(--ink);
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+#corporate-diwali-gifting .step-card h3 {
+      font-family: 'Bangers', cursive;
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+    }
+#corporate-diwali-gifting .step-card p {
+      font-size: 0.86rem;
+      color: #334155;
+      font-weight: 600;
+    }
+#corporate-diwali-gifting .form-section {
+      padding: 40px 0 64px;
+    }
+#corporate-diwali-gifting .form-panel {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--ivory);
+      color: var(--ink);
+      border: 3.5px solid var(--ink);
+      box-shadow: 9px 9px 0 var(--gold);
+      padding: 28px 22px;
+    }
+@media (min-width: 680px) {
+#corporate-diwali-gifting .form-panel {
+        padding: 36px 40px;
+      }
+
+    
+}
+#corporate-diwali-gifting .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+@media (min-width: 640px) {
+#corporate-diwali-gifting .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    
+}
+#corporate-diwali-gifting .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+#corporate-diwali-gifting .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+#corporate-diwali-gifting .form-group label {
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+#corporate-diwali-gifting .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      background: #fff;
+      border: 2.5px solid var(--ink);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+#corporate-diwali-gifting .form-control:focus {
+      outline: none;
+      border-color: var(--crimson);
+      box-shadow: 3px 3px 0 var(--gold);
+    }
+#corporate-diwali-gifting .form-control.highlight-flash {
+      background: #FEF3C7;
+      border-color: var(--crimson);
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.45);
+    }
+#corporate-diwali-gifting .estimate-strip {
+      background: var(--ivory-soft);
+      border: 2px dashed var(--gold-dark);
+      padding: 12px 16px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #78350F;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+#corporate-diwali-gifting .form-error {
+      color: var(--crimson);
+      font-size: 0.84rem;
+      font-weight: 800;
+      display: none;
+    }
+#corporate-diwali-gifting .form-success-box {
+      display: none;
+      background: #ECFDF5;
+      border: 3px solid #059669;
+      padding: 24px;
+      text-align: center;
+      margin-top: 18px;
+    }
+#corporate-diwali-gifting .form-success-box h3 {
+      font-family: 'Bangers', cursive;
+      font-size: 1.9rem;
+      color: #065F46;
+      margin-bottom: 6px;
+    }
+#corporate-diwali-gifting .form-success-box p {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: #064E3B;
+    }
+#corporate-diwali-gifting .faq-section {
+      padding: 36px 0 68px;
+    }
+#corporate-diwali-gifting .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+#corporate-diwali-gifting .faq-item {
+      background: var(--slate-card);
+      border: 2.5px solid var(--gold);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+#corporate-diwali-gifting .faq-trigger {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: #fff;
+      padding: 16px 20px;
+      text-align: left;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+#corporate-diwali-gifting .faq-trigger:hover {
+      color: var(--gold);
+    }
+#corporate-diwali-gifting .faq-icon {
+      font-family: 'Bangers', cursive;
+      font-size: 1.4rem;
+      color: var(--gold);
+      transition: transform 0.2s ease;
+    }
+#corporate-diwali-gifting .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+#corporate-diwali-gifting .faq-answer {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      border-top: 1px dashed rgba(245, 158, 11, 0.3);
+      padding-top: 12px;
+    }
+#corporate-diwali-gifting .faq-item.open .faq-answer {
+      display: block;
+    }
+#corporate-diwali-gifting .comic-fallback {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1E293B 0%, #090D16 100%);
+      color: var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      text-align: center;
+      font-family: 'Bangers', cursive;
+      font-size: 0.78rem;
+      line-height: 1.1;
+    }
+#corporate-diwali-gifting .corp-footer {
+      border-top: 3px solid var(--gold);
+      background: #090D16;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* ================= PAGE 3: SUPERMAN COLLECTOR WAITLIST STYLES ================= */
+#superman-collector-waitlist {
+      --fortress-navy: #081226;
+      --fortress-card: #0F2142;
+      --krypton-crimson: #DC2626;
+      --solar-gold: #FACC15;
+      --ice-blue: #38BDF8;
+      --ink: #040914;
+      --text-light: #F8FAFC;
+      --text-muted: #CBD5E1;
+      --border-comic: 3px solid #040914;
+    }
+#superman-collector-waitlist *, #superman-collector-waitlist *::before, #superman-collector-waitlist *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+#superman-collector-waitlist {
+      scroll-behavior: smooth;
+    }
+#superman-collector-waitlist {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--fortress-navy);
+      background-image:
+        radial-gradient(rgba(56, 189, 248, 0.12) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 80% 15%, rgba(220, 38, 38, 0.22), transparent 45%),
+        linear-gradient(180deg, #081226 0%, #0C1B38 55%, #060E1F 100%);
+      background-size: 20px 20px, 100% 100%, 100% 100%;
+      color: var(--text-light);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+#superman-collector-waitlist .comic-font {
+      font-family: 'Bangers', cursive;
+      letter-spacing: 0.04em;
+    }
+#superman-collector-waitlist .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+#superman-collector-waitlist .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 18, 38, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 3px solid var(--ice-blue);
+      padding: 12px 0;
+    }
+#superman-collector-waitlist .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+#superman-collector-waitlist .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+#superman-collector-waitlist .brand-badge {
+      background: var(--krypton-crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.7rem;
+      padding: 5px 14px;
+      border: 2.5px solid var(--solar-gold);
+      box-shadow: 3px 3px 0 var(--ink);
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+#superman-collector-waitlist .drop-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.14);
+      border: 2px solid var(--ice-blue);
+      color: var(--solar-gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 6px 14px;
+      border-radius: 999px;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+    }
+#superman-collector-waitlist .pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--solar-gold);
+      box-shadow: 0 0 8px var(--solar-gold);
+    }
+#superman-collector-waitlist .btn-heroic {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #FACC15 0%, #FDE047 100%);
+      color: var(--ink);
+      font-family: 'Bangers', cursive;
+      font-size: 1.45rem;
+      letter-spacing: 0.05em;
+      padding: 14px 28px;
+      border: 3px solid var(--ink);
+      box-shadow: 5px 5px 0 var(--krypton-crimson);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+#superman-collector-waitlist .btn-heroic:hover, #superman-collector-waitlist .btn-heroic:focus-visible {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--ice-blue);
+    }
+#superman-collector-waitlist .hero {
+      padding: 38px 0 52px;
+    }
+#superman-collector-waitlist .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+@media (min-width: 920px) {
+#superman-collector-waitlist .hero {
+        padding: 54px 0 68px;
+      }
+#superman-collector-waitlist .hero-grid {
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 44px;
+      }
+
+    
+}
+#superman-collector-waitlist .series-tag {
+      display: inline-block;
+      background: var(--krypton-crimson);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border: 2px solid var(--solar-gold);
+      margin-bottom: 14px;
+    }
+#superman-collector-waitlist .hero-title {
+      font-size: clamp(2.35rem, 5.2vw, 4.1rem);
+      line-height: 1.03;
+      color: #fff;
+      text-shadow: 4px 4px 0 var(--ink);
+      margin-bottom: 16px;
+    }
+#superman-collector-waitlist .hero-title span {
+      color: var(--solar-gold);
+    }
+#superman-collector-waitlist .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+#superman-collector-waitlist .spec-pills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 22px;
+    }
+#superman-collector-waitlist .spec-pill {
+      background: rgba(15, 33, 66, 0.9);
+      border: 1.5px solid rgba(56, 189, 248, 0.45);
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #E0F2FE;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+#superman-collector-waitlist .collector-showcase {
+      background: radial-gradient(circle at 50% 35%, #1E3A8A 0%, #09152B 70%);
+      border: 3.5px solid var(--ice-blue);
+      box-shadow: 8px 8px 0 var(--krypton-crimson), 0 0 30px rgba(56, 189, 248, 0.25);
+      padding: 24px 20px;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+#superman-collector-waitlist .edition-corner {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--ink);
+      border: 2px solid var(--solar-gold);
+      color: var(--solar-gold);
+      font-family: 'Bangers', cursive;
+      font-size: 1rem;
+      padding: 4px 10px;
+      z-index: 3;
+    }
+#superman-collector-waitlist .scale-corner {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--krypton-crimson);
+      border: 2px solid #fff;
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1rem;
+      padding: 4px 10px;
+      z-index: 3;
+    }
+#superman-collector-waitlist .figure-stage {
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 16px 0;
+    }
+#superman-collector-waitlist #custom-figure-img {
+      max-height: 290px;
+      width: auto;
+      object-fit: contain;
+      display: none;
+      z-index: 2;
+    }
+#superman-collector-waitlist .figure-svg-wrap {
+      width: 240px;
+      height: 280px;
+      position: relative;
+      z-index: 2;
+    }
+#superman-collector-waitlist .showcase-footer {
+      background: rgba(4, 9, 20, 0.88);
+      border: 2px solid var(--solar-gold);
+      padding: 10px 14px;
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--solar-gold);
+    }
+#superman-collector-waitlist .scarcity-section {
+      margin-bottom: 52px;
+    }
+#superman-collector-waitlist .scarcity-card {
+      background: linear-gradient(135deg, #0F2142 0%, #172B56 100%);
+      border: 3px solid var(--solar-gold);
+      box-shadow: 6px 6px 0 var(--ink);
+      padding: 24px;
+    }
+#superman-collector-waitlist .scarcity-top {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+@media (min-width: 820px) {
+#superman-collector-waitlist .scarcity-top {
+        flex-direction: row;
+        text-align: left;
+      }
+
+    
+}
+#superman-collector-waitlist .launch-meta h2 {
+      font-size: 1.85rem;
+      color: var(--solar-gold);
+      line-height: 1.1;
+    }
+#superman-collector-waitlist .launch-meta p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+#superman-collector-waitlist .timer-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+#superman-collector-waitlist .t-box {
+      background: var(--ink);
+      border: 2px solid var(--ice-blue);
+      min-width: 68px;
+      padding: 8px 10px;
+      text-align: center;
+      box-shadow: 3px 3px 0 var(--krypton-crimson);
+    }
+#superman-collector-waitlist .t-num {
+      font-family: 'Bangers', cursive;
+      font-size: 1.95rem;
+      color: #fff;
+      line-height: 1;
+      display: block;
+    }
+#superman-collector-waitlist .t-lbl {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--ice-blue);
+    }
+#superman-collector-waitlist .scarcity-bar-wrap {
+      background: var(--ink);
+      border: 2px solid var(--ice-blue);
+      padding: 12px 16px;
+    }
+#superman-collector-waitlist .scarcity-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #fff;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+#superman-collector-waitlist .scarcity-labels span:last-child {
+      color: var(--solar-gold);
+    }
+#superman-collector-waitlist .progress-track {
+      width: 100%;
+      height: 16px;
+      background: #1E293B;
+      border: 2px solid #fff;
+      overflow: hidden;
+    }
+#superman-collector-waitlist .progress-fill {
+      height: 100%;
+      width: 74.8%;
+      background: linear-gradient(90deg, var(--krypton-crimson), var(--solar-gold));
+      transition: width 0.5s ease;
+    }
+#superman-collector-waitlist .section-head {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+#superman-collector-waitlist .section-tag {
+      display: inline-block;
+      background: var(--ice-blue);
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border: 2px solid #fff;
+      margin-bottom: 8px;
+    }
+#superman-collector-waitlist .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #fff;
+      text-shadow: 3px 3px 0 var(--ink);
+      line-height: 1.08;
+    }
+#superman-collector-waitlist .benefits-section {
+      padding: 16px 0 56px;
+    }
+#superman-collector-waitlist .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+@media (min-width: 640px) {
+#superman-collector-waitlist .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    
+}
+@media (min-width: 980px) {
+#superman-collector-waitlist .benefits-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+    
+}
+#superman-collector-waitlist .benefit-card {
+      background: var(--fortress-card);
+      border: 2.5px solid var(--ice-blue);
+      box-shadow: 5px 5px 0 var(--ink);
+      padding: 22px 18px;
+      transition: transform 0.18s ease;
+    }
+#superman-collector-waitlist .benefit-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--solar-gold);
+    }
+#superman-collector-waitlist .benefit-num {
+      display: inline-block;
+      background: var(--krypton-crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.2rem;
+      padding: 3px 10px;
+      border: 2px solid var(--solar-gold);
+      margin-bottom: 12px;
+    }
+#superman-collector-waitlist .benefit-card h3 {
+      font-family: 'Bangers', cursive;
+      font-size: 1.45rem;
+      color: var(--solar-gold);
+      margin-bottom: 8px;
+      line-height: 1.15;
+    }
+#superman-collector-waitlist .benefit-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+#superman-collector-waitlist .offer-section {
+      padding: 12px 0 56px;
+    }
+#superman-collector-waitlist .vip-reward-box {
+      background: linear-gradient(135deg, #7F1D1D 0%, #1E3A8A 100%);
+      border: 3.5px solid var(--solar-gold);
+      box-shadow: 8px 8px 0 var(--ink);
+      padding: 28px 22px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+@media (min-width: 820px) {
+#superman-collector-waitlist .vip-reward-box {
+        grid-template-columns: 175px 1fr;
+        padding: 32px 36px;
+      }
+
+    
+}
+#superman-collector-waitlist .birthright-cover-wrap {
+      width: 155px;
+      height: 232px;
+      margin: 0 auto;
+      border: 3px solid var(--solar-gold);
+      box-shadow: 5px 5px 0 var(--ink);
+      background: var(--ink);
+      overflow: hidden;
+      position: relative;
+    }
+#superman-collector-waitlist .birthright-cover-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+#superman-collector-waitlist .bundle-half-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      background: var(--krypton-crimson);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 0.95rem;
+      text-align: center;
+      padding: 3px 6px;
+      border: 1.5px solid #fff;
+    }
+#superman-collector-waitlist .vip-copy h2 {
+      font-size: clamp(1.85rem, 3.6vw, 2.6rem);
+      color: var(--solar-gold);
+      line-height: 1.08;
+      margin-bottom: 12px;
+      text-shadow: 3px 3px 0 var(--ink);
+    }
+#superman-collector-waitlist .vip-copy p {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+#superman-collector-waitlist .vip-perks-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+#superman-collector-waitlist .vip-perks-list li {
+      background: rgba(4, 9, 20, 0.65);
+      border-left: 4px solid var(--solar-gold);
+      padding: 10px 14px;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+#superman-collector-waitlist .book-link {
+      color: var(--solar-gold);
+      font-weight: 800;
+      text-decoration: underline;
+    }
+#superman-collector-waitlist .signup-section {
+      padding: 16px 0 64px;
+    }
+#superman-collector-waitlist .signup-card {
+      max-width: 650px;
+      margin: 0 auto;
+      background: #FFFDF7;
+      color: var(--ink);
+      border: 3.5px solid var(--ink);
+      box-shadow: 9px 9px 0 var(--solar-gold);
+      padding: 30px 22px;
+    }
+@media (min-width: 640px) {
+#superman-collector-waitlist .signup-card {
+        padding: 36px 40px;
+      }
+
+    
+}
+#superman-collector-waitlist .channel-toggle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background: #E2E8F0;
+      padding: 6px;
+      border: 2.5px solid var(--ink);
+      margin-bottom: 20px;
+    }
+#superman-collector-waitlist .toggle-btn {
+      background: transparent;
+      border: none;
+      padding: 11px 12px;
+      font-family: 'Bangers', cursive;
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+#superman-collector-waitlist .toggle-btn.active {
+      background: var(--krypton-crimson);
+      color: #fff;
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+#superman-collector-waitlist .field-group {
+      margin-bottom: 16px;
+    }
+#superman-collector-waitlist .field-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+#superman-collector-waitlist .input-wrap {
+      display: flex;
+      align-items: center;
+      border: 2.5px solid var(--ink);
+      background: #fff;
+    }
+#superman-collector-waitlist .input-prefix {
+      background: #F1F5F9;
+      border-right: 2px solid var(--ink);
+      padding: 12px 14px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+#superman-collector-waitlist .field-input {
+      width: 100%;
+      border: none;
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--ink);
+      background: transparent;
+    }
+#superman-collector-waitlist .field-input:focus {
+      outline: none;
+    }
+#superman-collector-waitlist .form-err-msg {
+      color: var(--krypton-crimson);
+      font-size: 0.84rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      display: none;
+    }
+#superman-collector-waitlist .vip-confirmation {
+      display: none;
+      background: #ECFDF5;
+      border: 3px solid #059669;
+      padding: 24px 20px;
+      text-align: center;
+      margin-top: 18px;
+    }
+#superman-collector-waitlist .vip-confirmation h3 {
+      font-family: 'Bangers', cursive;
+      font-size: 2rem;
+      color: #065F46;
+      margin-bottom: 6px;
+    }
+#superman-collector-waitlist .vip-confirmation p {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: #064E3B;
+    }
+#superman-collector-waitlist .share-box {
+      margin-top: 26px;
+      padding-top: 20px;
+      border-top: 2px dashed rgba(4, 9, 20, 0.25);
+      text-align: center;
+    }
+#superman-collector-waitlist .share-box.highlight-share {
+      background: #FEF9C3;
+      padding: 18px;
+      border: 2.5px solid var(--ink);
+    }
+#superman-collector-waitlist .share-title {
+      font-family: 'Bangers', cursive;
+      font-size: 1.35rem;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+#superman-collector-waitlist .share-btns-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+#superman-collector-waitlist .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 16px;
+      font-weight: 800;
+      font-size: 0.84rem;
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      text-decoration: none;
+      cursor: pointer;
+      color: #fff;
+      transition: transform 0.15s ease;
+    }
+#superman-collector-waitlist .share-btn:hover {
+      transform: translateY(-2px);
+    }
+#superman-collector-waitlist .share-wa {
+      background: #16A34A;
+    }
+#superman-collector-waitlist .share-x {
+      background: #0F172A;
+    }
+#superman-collector-waitlist .share-copy {
+      background: var(--solar-gold);
+      color: var(--ink);
+    }
+#superman-collector-waitlist .share-feedback {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #065F46;
+      margin-top: 8px;
+      min-height: 1.2em;
+    }
+#superman-collector-waitlist .comic-fallback {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1E3A8A, #7F1D1D);
+      color: var(--solar-gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      text-align: center;
+      font-family: 'Bangers', cursive;
+      font-size: 1.15rem;
+    }
+#superman-collector-waitlist .waitlist-footer {
+      border-top: 3px solid var(--ice-blue);
+      background: #040914;
+      padding: 26px 0;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU WITH ONLY LINKS TO THE 3 PAGES (NO BACK BUTTON) -->
+  <header class="site-switcher" aria-label="Site Page Switcher">
+    <nav class="site-switcher-nav">
+      <a href="#diwali-mega-sale">1. Diwali Mega Issue Sale</a>
+      <a href="#corporate-diwali-gifting">2. Corporate Diwali Gifting</a>
+      <a href="#superman-collector-waitlist">3. Superman Collector Waitlist</a>
+    </nav>
+  </header>
+
+  <!-- PAGE 1: DIWALI MEGA ISSUE SALE -->
+  <section id="diwali-mega-sale" class="site-page" aria-label="Diwali Mega Issue Sale">
+<!-- 1. MINIMAL TOP BAR (STRICTLY NO NAV MENU) -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top-sale" class="brand-logo" aria-label="Comicpedia Home">
+        <span class="brand-badge">COMICPEDIA</span>
+        <span class="brand-tag">India's Graphic Novel Destination</span>
+      </a>
+      <a href="#bundles" class="festive-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C9.5 6 7 8.5 7 12a5 5 0 0 0 10 0c0-3.5-2.5-6-5-10zm0 16c-4.4 0-8 1.8-8 4h16c0-2.2-3.6-4-8-4z"/>
+        </svg>
+        Diwali Mega Issue Sale • Live Now
+      </a>
+    </div>
+  </header>
+
+  <main id="top-sale">
+    <!-- 2. FESTIVE HERO BANNER -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 1L14.8 8.5L22.5 9.2L16.5 14.2L18.5 21.8L12 17.5L5.5 21.8L7.5 14.2L1.5 9.2L9.2 8.5L12 1Z"/>
+            </svg>
+            Limited-Time Festive Collector Event
+          </div>
+          <h1 class="hero-title comic-font">
+            Light Up Your Shelf This Diwali! <span>Iconic Comics, Manga &amp; Collector Bundles</span> on Sale
+          </h1>
+          <p class="hero-sub">
+            Celebrate the Festival of Lights with landmark Marvel, DC, Manga, and Indie graphic novels. Grab flat 22% off curated collector bundles, stack code <strong>DIWALICOMICS15</strong> on solo reads, and unlock free festive superhero collectibles!
+          </p>
+          <div class="hero-cta-row">
+            <a href="#bundles" class="btn-cta">
+              Shop Diwali Deals
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <path d="M5 12h14M13 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#catalog" class="btn-cta btn-crimson">
+              Explore All 14 Bestsellers
+            </a>
+          </div>
+          <div class="hero-perks">
+            <span>🪔 Flat 22% Off Bundles</span>
+            <span>🎟️ Code: DIWALICOMICS15</span>
+            <span>🎁 Free Foil Bookmark &gt; ₹1,999</span>
+          </div>
+        </div>
+
+        <div class="hero-stage" aria-label="Featured Diwali Comic Covers">
+          <div class="Burst-bg"></div>
+          <div class="sticker-burst">
+            UP TO 22% OFF<br/>+ FREEBIES!
+          </div>
+          <div class="fanned-cards">
+            <div class="fan-card fan-card-1">
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g13.jpg" alt="Batman '89 Cover" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g14.webp" data-title="Batman '89" onerror="handleImgError(this)" />
+            </div>
+            <div class="fan-card fan-card-2">
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/c222.webp" alt="Amazing Spider-Man: Get Back Up Cover" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/c333.jpg" data-title="Amazing Spider-Man" onerror="handleImgError(this)" />
+            </div>
+            <div class="fan-card fan-card-3">
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/a21.jpg" alt="Demon Slayer Vol. 1 Cover" data-title="Demon Slayer Vol. 1" onerror="handleImgError(this)" />
+            </div>
+          </div>
+          <div class="diya-float">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFB703" aria-hidden="true">
+              <path d="M12 2c-1.8 3.2-3.5 5.4-3.5 8a3.5 3.5 0 0 0 7 0c0-2.6-1.7-4.8-3.5-8zM4 14c0 4.4 3.6 8 8 8s8-3.6 8-8H4z"/>
+            </svg>
+            Bagged &amp; Boarded Pan-India Delivery
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. LIVE COUNTDOWN TIMER -->
+    <section class="countdown-section" aria-label="Diwali Sale Countdown">
+      <div class="container">
+        <div class="countdown-box">
+          <div class="countdown-label">
+            <h2 class="comic-font">⏳ Hurry! Diwali Mega Issue Prices Expire In:</h2>
+            <p id="countdown-subtext">Counting down to November 8, 2026 at 11:59 PM IST — Don't miss First-Print Collector stock!</p>
+          </div>
+          <div class="timer-grid" role="timer" aria-live="polite">
+            <div class="time-cell">
+              <span class="time-val" id="cd-days">12</span>
+              <span class="time-unit">Days</span>
+            </div>
+            <div class="time-cell">
+              <span class="time-val" id="cd-hours">15</span>
+              <span class="time-unit">Hours</span>
+            </div>
+            <div class="time-cell">
+              <span class="time-val" id="cd-mins">09</span>
+              <span class="time-unit">Minutes</span>
+            </div>
+            <div class="time-cell">
+              <span class="time-val" id="cd-secs">45</span>
+              <span class="time-unit">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. THE DIWALI OFFER BREAKDOWN + 3 CURATED BUNDLES -->
+    <section id="bundles" class="bundles-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">3 Festive Ways To Save</span>
+          <h2 class="section-title comic-font">The Triple-Power Diwali Offer Breakdown</h2>
+          <p class="section-sub">Stack your festive perks across curated multi-book collector sets and solo graphic novels.</p>
+        </div>
+
+        <div class="offer-trio">
+          <div class="offer-pill-card">
+            <div class="offer-num">01</div>
+            <div>
+              <h3>Flat 22% Off Curated Bundles</h3>
+              <p>Pre-matched Marvel, DC, and Dark Fantasy Manga collector packs at our steepest festive markdown.</p>
+            </div>
+          </div>
+          <div class="offer-pill-card">
+            <div class="offer-num">02</div>
+            <div>
+              <h3>Extra 15% Off Storewide Coupon</h3>
+              <p>Use code <strong>DIWALICOMICS15</strong> at checkout on individual graphic novels and manga volumes.</p>
+            </div>
+          </div>
+          <div class="offer-pill-card">
+            <div class="offer-num">03</div>
+            <div>
+              <h3>Free Foil Bookmark &amp; Sticker Pack</h3>
+              <p>Unlocked automatically on every order above <strong>₹1,999</strong> — Limited-Edition Diwali Superhero set!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <span class="section-tag">Save 22% Instantly</span>
+          <h2 class="section-title comic-font">Diwali Collector Bundles</h2>
+          <p class="section-sub">Handpicked shelf-starters packed in collector-grade protective sleeves.</p>
+        </div>
+
+        <div class="bundles-grid">
+          <!-- Bundle 1 -->
+          <article class="bundle-card">
+            <span class="bundle-ribbon">22% OFF BUNDLE</span>
+            <div class="bundle-stage">
+              <div class="bundle-covers">
+                <div class="mini-cover">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/c222.webp" alt="Amazing Spider-Man: Get Back Up" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/c333.jpg" data-title="Amazing Spider-Man" onerror="handleImgError(this)" />
+                </div>
+                <div class="mini-cover">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g2.jpg" alt="Miles Morales: Straight Out of Brooklyn" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g3.webp" data-title="Miles Morales" onerror="handleImgError(this)" />
+                </div>
+              </div>
+            </div>
+            <div class="bundle-body">
+              <h3 class="bundle-title comic-font">Spider-Verse Diwali Duo</h3>
+              <ul class="bundle-list">
+                <li>🕷️ Amazing Spider-Man: Get Back Up (MRP ₹1,200)</li>
+                <li>⚡ Miles Morales: Straight Out of Brooklyn (MRP ₹1,200)</li>
+                <li>✨ Includes protective comic bags &amp; backing boards</li>
+              </ul>
+              <div class="bundle-price-box">
+                <div>
+                  <span class="price-mrp">MRP ₹2,400</span>
+                  <div class="price-sale">₹1,869</div>
+                </div>
+                <span class="save-pill">SAVE ₹531 • 22% OFF</span>
+              </div>
+              <a href="https://comicpedia.store/shop" target="_blank" rel="noopener" class="btn-cta btn-shop-card">
+                Shop Bundle Now →
+              </a>
+            </div>
+          </article>
+
+          <!-- Bundle 2 -->
+          <article class="bundle-card">
+            <span class="bundle-ribbon">FREE BOOKMARK ELIGIBLE</span>
+            <div class="bundle-stage">
+              <div class="bundle-covers">
+                <div class="mini-cover">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g11.jpg" alt="Batman: Year One" data-title="Batman: Year One" onerror="handleImgError(this)" />
+                </div>
+                <div class="mini-cover">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g18.jpg" alt="Wonder Woman: Year One" data-title="Wonder Woman: Year One" onerror="handleImgError(this)" />
+                </div>
+                <div class="mini-cover">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/s1.jpg" alt="Superman: Birthright" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/s3.jpg" data-title="Superman: Birthright" onerror="handleImgError(this)" />
+                </div>
+              </div>
+            </div>
+            <div class="bundle-body">
+              <h3 class="bundle-title comic-font">DC Trinity Origins Trio</h3>
+              <ul class="bundle-list">
+                <li>🦇 Batman: Year One (MRP ₹1,230)</li>
+                <li>🛡️ Wonder Woman: Year One (MRP ₹1,399)</li>
+                <li>🦸‍♂️ Superman: Birthright (MRP ₹1,399)</li>
+              </ul>
+              <div class="bundle-price-box">
+                <div>
+                  <span class="price-mrp">MRP ₹4,028</span>
+                  <div class="price-sale">₹3,139</div>
+                </div>
+                <span class="save-pill">SAVE ₹889 • 22% OFF</span>
+              </div>
+              <a href="https://comicpedia.store/shop" target="_blank" rel="noopener" class="btn-cta btn-shop-card">
+                Shop Bundle Now →
+              </a>
+            </div>
+          </article>
+
+          <!-- Bundle 3 -->
+          <article class="bundle-card">
+            <span class="bundle-ribbon">FREE BOOKMARK ELIGIBLE</span>
+            <div class="bundle-stage">
+              <div class="bundle-covers">
+                <div class="mini-cover">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/a21.jpg" alt="Demon Slayer Vol. 1" data-title="Demon Slayer Vol. 1" onerror="handleImgError(this)" />
+                </div>
+                <div class="mini-cover">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/a11.jpg" alt="Death Note Vol. 1" data-title="Death Note Vol. 1" onerror="handleImgError(this)" />
+                </div>
+              </div>
+            </div>
+            <div class="bundle-body">
+              <h3 class="bundle-title comic-font">Dark Fantasy Manga Vol. 1 Pack</h3>
+              <ul class="bundle-list">
+                <li>⚔️ Demon Slayer Vol. 1 (MRP ₹1,499)</li>
+                <li>📓 Death Note Vol. 1 (MRP ₹1,348)</li>
+                <li>🎁 Unlocks Free Foil Bookmark &amp; Diwali Stickers!</li>
+              </ul>
+              <div class="bundle-price-box">
+                <div>
+                  <span class="price-mrp">MRP ₹2,847</span>
+                  <div class="price-sale">₹2,219</div>
+                </div>
+                <span class="save-pill">SAVE ₹628 • 22% OFF</span>
+              </div>
+              <a href="https://comicpedia.store/shop" target="_blank" rel="noopener" class="btn-cta btn-shop-card">
+                Shop Bundle Now →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. INTERACTIVE COUPON CODE BANNER -->
+    <section class="coupon-section" aria-label="Interactive Promo Code">
+      <div class="container">
+        <div class="coupon-banner">
+          <div class="coupon-info">
+            <h2 class="comic-font">🎟️ Extra 15% Off Individual Graphic Novels &amp; Manga!</h2>
+            <p>Building your own custom stack? Tap to copy our festive coupon code and apply it directly at Comicpedia checkout.</p>
+          </div>
+          <div>
+            <div class="coupon-Interactive">
+              <span class="coupon-code-box" id="promo-code-text">DIWALICOMICS15</span>
+              <button type="button" class="copy-btn" id="copy-coupon-btn">
+                Copy Code
+              </button>
+            </div>
+            <div class="copy-status" id="copy-feedback" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FEATURED PRODUCTS GRID (ALL 14 OFFICIAL COMICPEDIA TITLES) -->
+    <section id="catalog" class="catalog-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">100% Original Editions</span>
+          <h2 class="section-title comic-font">Shop Individual Diwali Bestsellers</h2>
+          <p class="section-sub">Filter by universe below and click any edition to grab your copy directly on Comicpedia.store.</p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Filter comics by category">
+          <button type="button" class="filter-pill active" data-filter="all">All Editions (14)</button>
+          <button type="button" class="filter-pill" data-filter="Marvel">Marvel Universe (4)</button>
+          <button type="button" class="filter-pill" data-filter="DC">DC Universe (4)</button>
+          <button type="button" class="filter-pill" data-filter="Manga">Manga Collection (4)</button>
+          <button type="button" class="filter-pill" data-filter="Indie">Indie &amp; Graphic Novels (2)</button>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+          <!-- 1. Amazing Spider-Man: Get Back Up -->
+          <article class="product-card" data-category="Marvel">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Marvel Universe</span>
+              <span class="disc-badge">SAVE ₹50</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/c222.webp" alt="Amazing Spider-Man: Get Back Up" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/c333.jpg" data-title="Amazing Spider-Man: Get Back Up" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Spider-verse</div>
+              <h3 class="prod-title">Amazing Spider-Man: Get Back Up</h3>
+              <p class="prod-blurb">Peter Parker faces new threats and unexpected allies in this action-packed Spider-Man collection.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,150</span>
+                <span class="prod-reg">₹1,200</span>
+              </div>
+              <a href="https://comicpedia.store/product/amazing-spider-man-get-back-up/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 2. Miles Morales: Straight Out of Brooklyn -->
+          <article class="product-card" data-category="Marvel">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Marvel Universe</span>
+              <span class="disc-badge">DIWALI PICK</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g2.jpg" alt="Miles Morales: Straight Out of Brooklyn" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g3.webp" data-title="Miles Morales: Straight Out of Brooklyn" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Spider-verse</div>
+              <h3 class="prod-title">Miles Morales: Straight Out of Brooklyn</h3>
+              <p class="prod-blurb">Miles Morales balances everyday life with superhero responsibilities in this energetic origin-era collection.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,199</span>
+                <span class="prod-reg">₹1,200</span>
+              </div>
+              <a href="https://comicpedia.store/product/miles-morales-straight-out-of-brooklyn/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 3. X-Men: Days of Future Past -->
+          <article class="product-card" data-category="Marvel">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Marvel Universe</span>
+              <span class="disc-badge">SAVE ₹101</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g6.jpg" alt="X-Men: Days of Future Past" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g7.jpg" data-title="X-Men: Days of Future Past" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Mutant Heroes</div>
+              <h3 class="prod-title">X-Men: Days of Future Past</h3>
+              <p class="prod-blurb">The X-Men confront a dystopian future where mutantkind faces extinction in this landmark science-fiction story.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,899</span>
+                <span class="prod-reg">₹2,000</span>
+              </div>
+              <a href="https://comicpedia.store/product/x-men-days-of-future-past/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 4. Ms. Marvel: No Normal -->
+          <article class="product-card" data-category="Marvel">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Marvel Universe</span>
+              <span class="disc-badge">8% OFF</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g9.jpg" alt="Ms. Marvel: No Normal" data-title="Ms. Marvel: No Normal" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Mutant Heroes</div>
+              <h3 class="prod-title">Ms. Marvel: No Normal</h3>
+              <p class="prod-blurb">Kamala Khan discovers her powers and learns what it means to become a hero while navigating teenage life.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,099</span>
+                <span class="prod-reg">₹1,200</span>
+              </div>
+              <a href="https://comicpedia.store/product/ms-marvel-no-normal/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 5. Batman: Year One -->
+          <article class="product-card" data-category="DC">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">DC Universe</span>
+              <span class="disc-badge">ICONIC ORIGIN</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g11.jpg" alt="Batman: Year One" data-title="Batman: Year One" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">DC Icons</div>
+              <h3 class="prod-title">Batman: Year One</h3>
+              <p class="prod-blurb">Follow Bruce Wayne's early crusade against crime as Gotham City meets its emerging vigilante.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,199</span>
+                <span class="prod-reg">₹1,230</span>
+              </div>
+              <a href="https://comicpedia.store/product/batman-year-one/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 6. Batman '89 -->
+          <article class="product-card" data-category="DC">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">DC Universe</span>
+              <span class="disc-badge">21% OFF</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g13.jpg" alt="Batman '89" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g14.webp" data-title="Batman '89" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Gotham Legends</div>
+              <h3 class="prod-title">Batman '89</h3>
+              <p class="prod-blurb">Return to the cinematic world of Batman '89 in a graphic continuation of the iconic Gotham setting.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,100</span>
+                <span class="prod-reg">₹1,399</span>
+              </div>
+              <a href="https://comicpedia.store/product/batman-89/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 7. Wonder Woman: Year One -->
+          <article class="product-card" data-category="DC">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">DC Universe</span>
+              <span class="disc-badge">DIWALI DEAL</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g18.jpg" alt="Wonder Woman: Year One" data-title="Wonder Woman: Year One" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">DC Icons</div>
+              <h3 class="prod-title">Wonder Woman: Year One</h3>
+              <p class="prod-blurb">Diana's journey from Themyscira to the wider world reveals the courage and compassion behind Wonder Woman.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,367</span>
+                <span class="prod-reg">₹1,399</span>
+              </div>
+              <a href="https://comicpedia.store/product/wonder-woman-year-one/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 8. Superman: Birthright -->
+          <article class="product-card" data-category="DC">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">DC Universe</span>
+              <span class="disc-badge">SAVE ₹110</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/s1.jpg" alt="Superman: Birthright" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/s3.jpg" data-title="Superman: Birthright" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">DC Icons</div>
+              <h3 class="prod-title">Superman: Birthright</h3>
+              <p class="prod-blurb">Follow Clark Kent as he discovers his place in the world and begins to understand the extraordinary responsibilities of the Man of Steel.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,289</span>
+                <span class="prod-reg">₹1,399</span>
+              </div>
+              <a href="https://comicpedia.store/product/superman-birthright/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 9. One Piece Vol. 1: Romance Dawn -->
+          <article class="product-card" data-category="Manga">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Manga Collection</span>
+              <span class="disc-badge">SAVE ₹100</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/s4.jpg" alt="One Piece Vol. 1: Romance Dawn" data-title="One Piece Vol. 1: Romance Dawn" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Adventure Manga</div>
+              <h3 class="prod-title">One Piece Vol. 1: Romance Dawn</h3>
+              <p class="prod-blurb">Set sail on Monkey D. Luffy's journey to become King of the Pirates in search of the ultimate treasure.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,200</span>
+                <span class="prod-reg">₹1,300</span>
+              </div>
+              <a href="https://comicpedia.store/product/one-piece-vol-1-romance-dawn/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 10. Naruto Vol. 1 -->
+          <article class="product-card" data-category="Manga">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Manga Collection</span>
+              <span class="disc-badge">BESTSELLER</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/a1.jpg" alt="Naruto Vol. 1" data-title="Naruto Vol. 1" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Adventure Manga</div>
+              <h3 class="prod-title">Naruto Vol. 1</h3>
+              <p class="prod-blurb">Begin the story of Naruto Uzumaki, a spirited young ninja determined to earn his village's respect and become Hokage.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,190</span>
+                <span class="prod-reg">₹1,240</span>
+              </div>
+              <a href="https://comicpedia.store/product/naruto-vol-1/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 11. Death Note Vol. 1 -->
+          <article class="product-card" data-category="Manga">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Manga Collection</span>
+              <span class="disc-badge">SAVE ₹108</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/a11.jpg" alt="Death Note Vol. 1" data-title="Death Note Vol. 1" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Dark Fantasy &amp; Mystery</div>
+              <h3 class="prod-title">Death Note Vol. 1</h3>
+              <p class="prod-blurb">Brilliant student Light Yagami discovers a supernatural notebook in a gripping game of suspense and morality.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,240</span>
+                <span class="prod-reg">₹1,348</span>
+              </div>
+              <a href="https://comicpedia.store/product/death-note-vol-1/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 12. Demon Slayer Vol. 1 -->
+          <article class="product-card" data-category="Manga">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Manga Collection</span>
+              <span class="disc-badge">13% OFF</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/a21.jpg" alt="Demon Slayer Vol. 1" data-title="Demon Slayer Vol. 1" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Dark Fantasy &amp; Mystery</div>
+              <h3 class="prod-title">Demon Slayer Vol. 1</h3>
+              <p class="prod-blurb">Tanjiro Kamado sets out on a perilous journey to become a demon slayer and restore his sister Nezuko.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,299</span>
+                <span class="prod-reg">₹1,499</span>
+              </div>
+              <a href="https://comicpedia.store/product/demon-slayer-vol-1/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 13. Saga Vol. 1 -->
+          <article class="product-card" data-category="Indie">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Indie &amp; Graphic Novels</span>
+              <span class="disc-badge">SAVE ₹101</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/a31.jpeg" alt="Saga Vol. 1" data-title="Saga Vol. 1" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Fantasy &amp; Sci-Fi</div>
+              <h3 class="prod-title">Saga Vol. 1</h3>
+              <p class="prod-blurb">Star-crossed parents Alana and Marko fight to protect their family across a war-torn science-fantasy galaxy.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,099</span>
+                <span class="prod-reg">₹1,200</span>
+              </div>
+              <a href="https://comicpedia.store/product/saga-vol-1/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- 14. The Sandman: Book One -->
+          <article class="product-card" data-category="Indie">
+            <div class="prod-img-wrap">
+              <span class="cat-badge">Indie &amp; Graphic Novels</span>
+              <span class="disc-badge">11% OFF</span>
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/a41.jpg" alt="The Sandman: Book One" data-title="The Sandman: Book One" onerror="handleImgError(this)" />
+            </div>
+            <div class="prod-content">
+              <div class="prod-subcat">Fantasy &amp; Sci-Fi</div>
+              <h3 class="prod-title">The Sandman: Book One</h3>
+              <p class="prod-blurb">Enter the dark, mythological realm of Dream in this celebrated literary fantasy graphic novel.</p>
+              <div class="prod-price-row">
+                <span class="prod-sale">₹1,200</span>
+                <span class="prod-reg">₹1,345</span>
+              </div>
+              <a href="https://comicpedia.store/product/the-sandman-book-one/" target="_blank" rel="noopener" class="btn-cta btn-crimson btn-shop-card">Shop Now</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. TRUST STRIP & FINAL CTA (NO SITEMAP MENU) -->
+  <footer class="trust-footer">
+    <div class="container">
+      <div class="trust-strip">
+        <div class="trust-item">
+          <h3>✨ 100% Authentic Prints</h3>
+          <p>Direct publisher-sourced Marvel, DC, Viz Media &amp; Image Comics editions.</p>
+        </div>
+        <div class="trust-item">
+          <h3>🛡️ Bagged &amp; Boarded Mint Protection</h3>
+          <p>Every graphic novel ships in acid-free sleeves and corner-guarded mailers.</p>
+        </div>
+        <div class="trust-item">
+          <h3>🚚 Fast Pan-India Delivery</h3>
+          <p>Tracked express dispatch across Mumbai, Delhi, Bengaluru, Hyderabad &amp; 19,000+ pincodes.</p>
+        </div>
+      </div>
+
+      <div class="final-cta-box">
+        <h2 class="comic-font">Ready To Build Your Ultimate Diwali Haul?</h2>
+        <p>Don't forget to apply code <strong>DIWALICOMICS15</strong> at checkout and unlock your free foil bookmark on orders over ₹1,999.</p>
+        <a href="https://comicpedia.store/shop" target="_blank" rel="noopener" class="btn-cta">
+          Shop All Comics Now →
+        </a>
+      </div>
+
+      <p class="copyright-line">© 2026 Comicpedia (comicpedia.store) • Festive Diwali Collector Campaign • All prices in INR (₹).</p>
+    </div>
+  </footer>
+  </section>
+
+  <!-- PAGE 2: CORPORATE DIWALI GIFTING -->
+  <section id="corporate-diwali-gifting" class="site-page" aria-label="Corporate Diwali Gifting">
+<!-- 1. MINIMAL TOP BAR (NO NAV MENU) -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top-corporate" class="brand-wrap" aria-label="Comicpedia Corporate Home">
+        <span class="brand-logo">COMICPEDIA</span>
+        <span class="brand-sub">Corporate Gifting Desk</span>
+      </a>
+      <a href="#enquiry-form" class="btn-gold btn-gold-sm">
+        Request Bulk Quote
+      </a>
+    </div>
+  </header>
+
+  <main id="top-corporate">
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="b2b-kicker">
+            🪔 Curated Diwali 2026 Hampers for Startups, Agencies &amp; Tech Teams
+          </div>
+          <h1 class="hero-title comic-font">
+            Ditch Generic Dry Fruits. <span>Gift Stories Your Team &amp; Clients Will Actually Keep.</span>
+          </h1>
+          <p class="hero-lead">
+            Trade forgettable sweet boxes for custom-branded graphic novel, manga, and pop-culture collector hampers. Complete with your company logo sleeve, artisanal festive treats, and hassle-free Pan-India WFH doorstep or office delivery.
+          </p>
+          <div class="b2b-badges">
+            <span class="b2b-badge">🧾 18% GST Tax Invoice</span>
+            <span class="b2b-badge">🚚 Pan-India WFH &amp; Office Shipping</span>
+            <span class="b2b-badge">🎨 Free 24-Hr Box Mockup</span>
+            <span class="b2b-badge">📦 Low MOQ: 15 Boxes</span>
+          </div>
+          <a href="#enquiry-form" class="btn-gold">
+            Get Custom Quote &amp; Catalogue →
+          </a>
+        </div>
+
+        <div class="hero-vault" aria-label="Corporate Gift Box Showcase">
+          <span class="vault-tag">2026 DIWALI EDITION</span>
+          <div class="vault-covers-grid">
+            <div class="vault-cover">
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g6.jpg" alt="X-Men: Days of Future Past" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g7.jpg" data-title="X-Men: Days of Future Past" onerror="handleImgError(this)" />
+            </div>
+            <div class="vault-cover">
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/g13.jpg" alt="Batman '89" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g14.webp" data-title="Batman '89" onerror="handleImgError(this)" />
+            </div>
+            <div class="vault-cover">
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/a21.jpg" alt="Demon Slayer Vol. 1" data-title="Demon Slayer Vol. 1" onerror="handleImgError(this)" />
+            </div>
+            <div class="vault-cover">
+              <img src="https://comicpedia.store/wp-content/uploads/2026/10/s1.jpg" alt="Superman: Birthright" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/s3.jpg" data-title="Superman: Birthright" onerror="handleImgError(this)" />
+            </div>
+          </div>
+          <div class="vault-caption">
+            <span>✨ Hardcover &amp; Collector Editions + Festive Goodies</span>
+            <span>From ₹1,399/box</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TRUST SECTION -->
+    <section class="trust-section" aria-label="B2B Trust & Testimonials">
+      <div class="container">
+        <div class="stats-strip">
+          <div class="stat-box">
+            <div class="stat-num">4,500+</div>
+            <div class="stat-label">Collector Hampers Delivered Across India</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">On-Time Pre-Diwali Dispatch Guarantee</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">85+</div>
+            <div class="stat-label">Tech Startups, Game Studios &amp; Agencies Served</div>
+          </div>
+        </div>
+
+        <div class="client-logos" aria-label="Trusted Corporate Partners">
+          <span class="client-pill">⚡ PixelForge Studios</span>
+          <span class="client-pill">🚀 NovaStack Tech</span>
+          <span class="client-pill">🎬 Kinetix Media</span>
+          <span class="client-pill">🔬 HyperLoop Labs</span>
+          <span class="client-pill">🎨 CloudNine Design</span>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="quote-card">
+            <p class="quote-text">
+              "For the first time in 5 years, our Slack #general channel blew up with unboxing photos! Sending Batman: Year One &amp; Demon Slayer hampers to 140 remote engineers across 18 cities was effortless."
+            </p>
+            <div class="quote-author">
+              Ananya Deshmukh
+              <span>HR Director, NovaStack Tech (Bengaluru)</span>
+            </div>
+          </article>
+
+          <article class="quote-card">
+            <p class="quote-text">
+              "Our agency clients get 20 identical dry-fruit trays every October. Gifting them The Legends Collector Vault with our custom comic-strip Diwali card turned into an instant conversation starter."
+            </p>
+            <div class="quote-author">
+              Rohan Malhotra
+              <span>Founder &amp; ECD, Kinetix Media (Mumbai)</span>
+            </div>
+          </article>
+
+          <article class="quote-card">
+            <p class="quote-text">
+              "Comicpedia handled everything—from letting our team pick between Marvel, DC, or Manga genres to providing a clean 18% GST invoice and individual tracking links."
+            </p>
+            <div class="quote-author">
+              Priya Nair
+              <span>People Operations Lead, PixelForge Studios (Hyderabad)</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 3 GIFT BOX OPTIONS -->
+    <section id="gift-boxes" class="boxes-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Curated 2026 Tiers</span>
+          <h2 class="section-title comic-font">Choose Your Corporate Diwali Gift Box</h2>
+          <p class="section-sub">Every box features authentic graphic novels from Comicpedia.store paired with festive gourmet treats and custom company branding.</p>
+        </div>
+
+        <div class="boxes-grid">
+          <!-- Option 1 -->
+          <article class="hamper-card">
+            <div class="hamper-preview">
+              <div class="hamper-thumbs">
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g9.jpg" alt="Ms. Marvel: No Normal" data-title="Ms. Marvel" onerror="handleImgError(this)" />
+                </div>
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g11.jpg" alt="Batman: Year One" data-title="Batman: Year One" onerror="handleImgError(this)" />
+                </div>
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/s1.jpg" alt="Superman: Birthright" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/s3.jpg" data-title="Superman: Birthright" onerror="handleImgError(this)" />
+                </div>
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/s4.jpg" alt="One Piece Vol. 1: Romance Dawn" data-title="One Piece Vol. 1" onerror="handleImgError(this)" />
+                </div>
+              </div>
+              <div class="preview-note">Includes 1 Iconic Origin Graphic Novel per Box</div>
+            </div>
+            <div class="hamper-body">
+              <div class="hamper-tier">Option 01 • Team Favourite</div>
+              <h3 class="hamper-title comic-font">The Origin Story Box</h3>
+              <div class="hamper-price">₹1,399 – ₹1,699 / box</div>
+              <ul class="hamper-includes">
+                <li>📚 <strong>1 Iconic Origin Graphic Novel</strong> (Choose from <em>Ms. Marvel: No Normal</em>, <em>Batman: Year One</em>, <em>Superman: Birthright</em>, or <em>One Piece Vol. 1</em>)</li>
+                <li>🪔 <strong>Handcrafted Brass Diya</strong> in velvet pouch</li>
+                <li>🍫 <strong>Artisanal Diwali Chocolates</strong> (4-pc truffle box)</li>
+                <li>🔖 <strong>Custom Company Logo Foil Bookmark</strong></li>
+              </ul>
+              <button type="button" class="btn-gold btn-enquire-box" data-box-tier="The Origin Story Box (₹1,399 – ₹1,699 / box)">
+                Enquire For This Box →
+              </button>
+            </div>
+          </article>
+
+          <!-- Option 2 (Most Popular) -->
+          <article class="hamper-card popular">
+            <span class="popular-tag">★ MOST POPULAR FOR TECH TEAMS ★</span>
+            <div class="hamper-preview">
+              <div class="hamper-thumbs">
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/c222.webp" alt="Amazing Spider-Man: Get Back Up" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/c333.jpg" data-title="Spider-Man" onerror="handleImgError(this)" />
+                </div>
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g2.jpg" alt="Miles Morales: Straight Out of Brooklyn" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g3.webp" data-title="Miles Morales" onerror="handleImgError(this)" />
+                </div>
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/a1.jpg" alt="Naruto Vol. 1" data-title="Naruto Vol. 1" onerror="handleImgError(this)" />
+                </div>
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/a21.jpg" alt="Demon Slayer Vol. 1" data-title="Demon Slayer Vol. 1" onerror="handleImgError(this)" />
+                </div>
+              </div>
+              <div class="preview-note">Also available with Saga Vol. 1 + The Sandman: Book One</div>
+            </div>
+            <div class="hamper-body">
+              <div class="hamper-tier">Option 02 • Bestseller Duo</div>
+              <h3 class="hamper-title comic-font">The Dynamic Duo Hamper</h3>
+              <div class="hamper-price">₹2,499 – ₹2,999 / box</div>
+              <ul class="hamper-includes">
+                <li>📚 <strong>2 Paired Graphic Novels</strong> (<em>Spider-Man + Miles Morales</em>, <em>Naruto Vol. 1 + Demon Slayer Vol. 1</em>, or <em>Saga Vol. 1 + The Sandman: Book One</em>)</li>
+                <li>☕ <strong>Pop-Culture Ceramic Coffee Mug</strong></li>
+                <li>🥜 <strong>Roasted Festive Dry Fruit Jar</strong> (Spiced Cashews &amp; Almonds)</li>
+                <li>💌 <strong>Custom Comic-Strip Diwali Greeting Card</strong></li>
+              </ul>
+              <button type="button" class="btn-gold btn-enquire-box" data-box-tier="The Dynamic Duo Hamper (₹2,499 – ₹2,999 / box)">
+                Enquire For This Box →
+              </button>
+            </div>
+          </article>
+
+          <!-- Option 3 -->
+          <article class="hamper-card">
+            <div class="hamper-preview">
+              <div class="hamper-thumbs">
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g6.jpg" alt="X-Men: Days of Future Past" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g7.jpg" data-title="X-Men: Days of Future Past" onerror="handleImgError(this)" />
+                </div>
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g13.jpg" alt="Batman '89" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/g14.webp" data-title="Batman '89" onerror="handleImgError(this)" />
+                </div>
+                <div class="thumb-item">
+                  <img src="https://comicpedia.store/wp-content/uploads/2026/10/g18.jpg" alt="Wonder Woman: Year One" data-title="Wonder Woman: Year One" onerror="handleImgError(this)" />
+                </div>
+              </div>
+              <div class="preview-note">Includes All 3 Landmark Collector Graphic Novels</div>
+            </div>
+            <div class="hamper-body">
+              <div class="hamper-tier">Option 03 • Executive &amp; VIP Client Suite</div>
+              <h3 class="hamper-title comic-font">The Legends Collector Vault</h3>
+              <div class="hamper-price">₹3,999 – ₹4,799 / box</div>
+              <ul class="hamper-includes">
+                <li>📚 <strong>3 Landmark Graphic Novels</strong> (<em>X-Men: Days of Future Past</em> + <em>Batman '89</em> + <em>Wonder Woman: Year One</em>)</li>
+                <li>🕯️ <strong>Scented Soy Festive Candle</strong> (Sandalwood &amp; Saffron)</li>
+                <li>🍬 <strong>Gourmet Artisanal Mithai Tin</strong></li>
+                <li>🖥️ <strong>Collector Desk Mat</strong> in a Magnetic Keepsake Box</li>
+              </ul>
+              <button type="button" class="btn-gold btn-enquire-box" data-box-tier="The Legends Collector Vault (₹3,999 – ₹4,799 / box)">
+                Enquire For This Box →
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CUSTOMISATION SECTION -->
+    <section class="custom-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Tailored To Your Brand</span>
+          <h2 class="section-title comic-font">100% Custom-Branded Unboxing Experience</h2>
+          <p class="section-sub">We turn your company culture into a limited-edition collector crossover.</p>
+        </div>
+
+        <div class="custom-grid">
+          <div class="custom-card">
+            <div class="custom-icon">01</div>
+            <h3>Company Logo Box Sleeve &amp; Bookmark</h3>
+            <p>Full-colour outer comic-art sleeve and gold-foiled superhero bookmark co-branded with your company logo.</p>
+          </div>
+          <div class="custom-card">
+            <div class="custom-icon">02</div>
+            <h3>Custom Comic-Panel Diwali Card</h3>
+            <p>Personalised CEO/Founders festive note printed on a 350 GSM comic-strip storyboard greeting card.</p>
+          </div>
+          <div class="custom-card">
+            <div class="custom-icon">03</div>
+            <h3>Genre Mix-and-Match Per Member</h3>
+            <p>Share a 1-click preference link so each teammate can pick Marvel, DC, Manga, or Indie Fantasy.</p>
+          </div>
+          <div class="custom-card">
+            <div class="custom-icon">04</div>
+            <h3>Flexible MOQ (15+ Boxes) &amp; Slabs</h3>
+            <p>Starts at just 15 boxes. Unlock tiered volume discounts at <strong>25+ (8% off)</strong>, <strong>50+ (14% off)</strong>, and <strong>100+ boxes (20% off)</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. HOW IT WORKS -->
+    <section class="steps-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Zero-Headache Execution</span>
+          <h2 class="section-title comic-font">How Corporate Ordering Works</h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-badge">STEP 1</span>
+            <h3>Pick Box Tier</h3>
+            <p>Select your preferred hamper tier and quantity (15 to 1,000+ boxes) using the form below.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-badge">STEP 2</span>
+            <h3>Share Logo &amp; Greeting</h3>
+            <p>Send us your vector logo and festive message for your custom sleeve and bookmark.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-badge">STEP 3</span>
+            <h3>Approve Mockup in 24 Hrs</h3>
+            <p>Our design team shares a 3D digital box mockup and GST proforma invoice within 24 hours.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-badge">STEP 4</span>
+            <h3>Pan-India Dispatch</h3>
+            <p>Bulk delivery to your office or individual tracked courier dispatch to remote WFH doorsteps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ENQUIRY FORM -->
+    <section id="enquiry-form" class="form-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Get Pricing &amp; Free Digital Mockup</span>
+          <h2 class="section-title comic-font">Request Your Custom Corporate Quote</h2>
+          <p class="section-sub">Fill in your requirements below. Our B2B gifting specialist will respond within 4 business hours with volume pricing and a free branded mockup.</p>
+        </div>
+
+        <div class="form-panel">
+          <form id="b2b-quote-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="full-name">Full Name *</label>
+                <input type="text" id="full-name" class="form-control" placeholder="e.g. Siddharth Verma" required />
+              </div>
+
+              <div class="form-group">
+                <label for="company-name">Company Name *</label>
+                <input type="text" id="company-name" class="form-control" placeholder="e.g. Acme Tech Pvt Ltd" required />
+              </div>
+
+              <div class="form-group">
+                <label for="work-email">Work Email *</label>
+                <input type="email" id="work-email" class="form-control" placeholder="siddharth@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone-num">Phone / WhatsApp Number *</label>
+                <input type="tel" id="phone-num" class="form-control" placeholder="+91 98765 43210" required />
+              </div>
+
+              <div class="form-group">
+                <label for="box-tier">Select Gift Box Tier *</label>
+                <select id="box-tier" class="form-control" required>
+                  <option value="The Origin Story Box (₹1,399 – ₹1,699 / box)">The Origin Story Box (₹1,399 – ₹1,699 / box)</option>
+                  <option value="The Dynamic Duo Hamper (₹2,499 – ₹2,999 / box)" selected>The Dynamic Duo Hamper (₹2,499 – ₹2,999 / box) — Most Popular</option>
+                  <option value="The Legends Collector Vault (₹3,999 – ₹4,799 / box)">The Legends Collector Vault (₹3,999 – ₹4,799 / box)</option>
+                  <option value="Custom Mix Across Tiers">Custom Mix Across Tiers</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="box-qty">Estimated Quantity (MOQ: 15 Boxes) *</label>
+                <input type="number" id="box-qty" class="form-control" min="15" max="5000" value="30" required />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="delivery-type">Preferred Delivery Mode *</label>
+                <select id="delivery-type" class="form-control" required>
+                  <option value="Remote Employee Doorsteps (Pan-India WFH)">Remote Employee Doorsteps (Individual Pan-India WFH Shipping)</option>
+                  <option value="Single Office Location (Bulk Dispatch)">Single Office Location (Bulk Dispatch)</option>
+                  <option value="Hybrid (Office + Remote Doorsteps)">Hybrid (Office Bulk + Remote Employee Doorsteps)</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="custom-notes">Customisation Notes / Preferred Titles (Optional)</label>
+                <textarea id="custom-notes" class="form-control" rows="3" placeholder="Tell us if you'd like specific Marvel/DC/Manga titles, custom sleeve branding, or a sample box..."></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <div class="estimate-strip" id="live-estimate">
+                  <span>📊 <strong>Volume Slab Applied:</strong> 25+ Boxes (8% Corporate Discount Eligible)</span>
+                  <span id="est-total-text">Fast 24-Hr Mockup Included</span>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <p class="form-error" id="b2b-form-error" role="alert"></p>
+                <button type="submit" class="btn-gold" style="width: 100%; font-size: 1.45rem; padding: 15px;">
+                  Request Custom Catalogue &amp; Quote →
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="form-success-box" id="b2b-success-box" aria-live="polite">
+            <h3>🎉 Enquiry Received! Your Custom Mockup Is In Motion</h3>
+            <p id="b2b-success-details"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INTERACTIVE FAQ ACCORDION -->
+    <section class="faq-section" aria-label="Frequently Asked Corporate Questions">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Got Questions?</span>
+          <h2 class="section-title comic-font">Corporate Gifting FAQs</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button type="button" class="faq-trigger" aria-expanded="true">
+              <span>1. What is the Minimum Order Quantity (MOQ) and volume discount structure?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Our corporate Diwali hampers start at a low MOQ of <strong>15 boxes</strong>. You can mix and match comic genres within your order. Volume discounts kick in automatically at <strong>25+ boxes (8% off)</strong>, <strong>50+ boxes (14% off)</strong>, and <strong>100+ boxes (20% off)</strong>.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>2. Do you provide a compliant GST tax invoice for corporate accounting?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes! Every corporate order comes with a full GST-compliant tax invoice (with HSN codes and your company GSTIN) so your finance team can claim input tax credit seamlessly.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>3. Can you ship hampers directly to individual remote employees across India?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Absolutely. Simply share an Excel sheet with employee addresses (or use our self-fill address collection link). We dispatch via BlueDart, Delhivery, and DTDC to 19,000+ pincodes across India in crush-proof collector mailers with live tracking dashboard access.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>4. What is the lead time for custom logo sleeves, bookmarks, and dispatch?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Once you approve the digital mockup, custom printing and hamper assembly take <strong>5–7 business days</strong>. Need an urgent last-minute Diwali turnaround? Ask our desk for 72-hour express dispatch slots.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>5. Can we order a physical sample hamper before confirming our bulk order?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes! You can order a single physical sample box at base corporate price. Once you confirm a bulk order of 25+ boxes, 100% of your sample box cost is credited back toward your final invoice.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="corp-footer">
+    <div class="container">
+      © 2026 Comicpedia Corporate Gifting (comicpedia.store) • Pan-India B2B Fulfilment • All prices in INR (₹).
+    </div>
+  </footer>
+  </section>
+
+  <!-- PAGE 3: SUPERMAN COLLECTOR WAITLIST -->
+  <section id="superman-collector-waitlist" class="site-page" aria-label="Superman Collector Waitlist">
+<!-- 1. MINIMAL TOP BAR (NO NAV MENU) -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top-waitlist" class="brand-logo" aria-label="Comicpedia Home">
+        <span class="brand-badge">COMICPEDIA</span>
+      </a>
+      <div class="drop-pill">
+        <span class="pulse-dot"></span>
+        Upcoming Collector Drop • First Wave Limited to 250 Units
+      </div>
+    </div>
+  </header>
+
+  <main id="top-waitlist">
+    <!-- 2. PRODUCT TEASER HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="series-tag">Man of Steel Series #01 • Comicpedia Exclusive</span>
+          <h1 class="hero-title comic-font">
+            Look Up. <span>The Ultimate Collector's Edition Superman Action Figure</span> Lands Soon on Comicpedia.
+          </h1>
+          <p class="hero-sub">
+            Engineered for serious DC collectors in India. Featuring a comic-accurate Metropolis sculpt, metallic S-shield emblem, posable wired fabric cape, and Fortress of Solitude flight stand.
+          </p>
+          <a href="#waitlist-form" class="btn-heroic">
+            Join the Early-Bird Waitlist →
+          </a>
+
+          <div class="spec-pills">
+            <div class="spec-pill">📏 7-Inch Collector Scale</div>
+            <div class="spec-pill">⚙️ 32 Points of Articulation</div>
+            <div class="spec-pill">🦸‍♂️ Posable Wired Fabric Cape</div>
+            <div class="spec-pill">🔥 Heat-Vision &amp; Classic Heads</div>
+          </div>
+        </div>
+
+        <!-- DRAMATIC COLLECTOR SHOWCASE FRAME -->
+        <div class="collector-showcase" aria-label="Collector's Edition Superman 7-Inch Action Figure Display">
+          <span class="edition-corner">SERIES #01 • WAVE 1</span>
+          <span class="scale-corner">ONLY 250 UNITS</span>
+
+          <div class="figure-stage">
+            <img id="custom-figure-img" alt="Collector's Edition Superman 7-Inch Action Figure" />
+            <div class="figure-svg-wrap" id="heroic-svg-placeholder">
+              <svg viewBox="0 0 260 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Heroic Man of Steel Collector Silhouette">
+                <!-- Glowing Fortress Crystals -->
+                <polygon points="35,280 55,150 80,280" fill="rgba(56,189,248,0.22)" stroke="#38BDF8" stroke-width="1.5" />
+                <polygon points="180,280 205,140 230,280" fill="rgba(56,189,248,0.22)" stroke="#38BDF8" stroke-width="1.5" />
+                <!-- Flowing Wired Crimson Cape -->
+                <path d="M85,75 C40,120 25,200 38,265 C75,245 105,255 130,248 C155,255 185,245 222,265 C235,200 220,120 175,75 Z" fill="#DC2626" stroke="#040914" stroke-width="3" />
+                <!-- Heroic Torso & Shoulders -->
+                <path d="M78,80 L182,80 L164,175 L96,175 Z" fill="#1D4ED8" stroke="#040914" stroke-width="3" />
+                <!-- Muscular Arms -->
+                <path d="M78,80 L52,135 L68,175 L88,125 Z" fill="#1D4ED8" stroke="#040914" stroke-width="3" />
+                <path d="M182,80 L208,135 L192,175 L172,125 Z" fill="#1D4ED8" stroke="#040914" stroke-width="3" />
+                <!-- Sculpted Head & Iconic Curl -->
+                <circle cx="130" cy="48" r="22" fill="#0F172A" stroke="#38BDF8" stroke-width="2.5" />
+                <!-- Glowing Heat Vision Eyes -->
+                <circle cx="122" cy="46" r="3" fill="#FACC15" />
+                <circle cx="138" cy="46" r="3" fill="#FACC15" />
+                <!-- Iconic S-Shield Diamond Emblem -->
+                <polygon points="130,92 158,110 130,148 102,110" fill="#FACC15" stroke="#DC2626" stroke-width="3" />
+                <path d="M118,108 C128,102 142,106 138,116 C134,122 120,120 122,129 C124,135 136,134 140,130" fill="none" stroke="#DC2626" stroke-width="4" stroke-linecap="round" />
+                <!-- Belt & Trunks -->
+                <rect x="96" y="170" width="68" height="10" fill="#FACC15" stroke="#040914" stroke-width="2" />
+                <path d="M96,180 L164,180 L172,265 L142,265 L130,205 L118,265 L88,265 Z" fill="#1E3A8A" stroke="#040914" stroke-width="3" />
+                <!-- Collector Base -->
+                <ellipse cx="130" cy="280" rx="85" ry="12" fill="#040914" stroke="#38BDF8" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="showcase-footer">
+            <span>🛡️ Collector Window Box + Flight Stand</span>
+            <span>Est. Launch MRP: ₹3,499</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. LAUNCH DATE & SCARCITY BANNER -->
+    <section class="scarcity-section" aria-label="Official Drop Countdown & Waitlist Scarcity">
+      <div class="container">
+        <div class="scarcity-card">
+          <div class="scarcity-top">
+            <div class="launch-meta">
+              <h2 class="comic-font">🚀 Official Drop: November 15, 2026 at 12:00 PM IST</h2>
+              <p>Waitlist members receive their private 24-hour early-access checkout link on November 14 at 12:00 PM IST.</p>
+            </div>
+
+            <div class="timer-row" role="timer" aria-live="polite">
+              <div class="t-box">
+                <span class="t-num" id="wl-days">19</span>
+                <span class="t-lbl">Days</span>
+              </div>
+              <div class="t-box">
+                <span class="t-num" id="wl-hours">03</span>
+                <span class="t-lbl">Hours</span>
+              </div>
+              <div class="t-box">
+                <span class="t-num" id="wl-mins">10</span>
+                <span class="t-lbl">Minutes</span>
+              </div>
+              <div class="t-box">
+                <span class="t-num" id="wl-secs">40</span>
+                <span class="t-lbl">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="scarcity-bar-wrap">
+            <div class="scarcity-labels">
+              <span id="scarcity-count-text">🔥 187 of 250 First-Wave Waitlist Spots Claimed</span>
+              <span id="scarcity-left-text">Only 63 Early-Bird Spots Remaining!</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="scarcity-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. KEY BENEFITS (4 COLLECTOR FEATURE CARDS) -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Fortress-Grade Craftsmanship</span>
+          <h2 class="section-title comic-font">4 Reasons Collectors Are Lining Up</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <span class="benefit-num">FEATURE 01</span>
+            <h3>Comic-Accurate Sculpt</h3>
+            <p>Inspired by classic DC comic art with a raised metallic S-shield chest emblem and two swappable portraits (Classic &amp; Heat-Vision).</p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-num">FEATURE 02</span>
+            <h3>Dynamic Flight Poseability</h3>
+            <p>Includes a custom bendable wired cloth cape and a crystal-clear Fortress of Solitude transparent flight stand for aerial poses.</p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-num">FEATURE 03</span>
+            <h3>Collector-Grade Packaging</h3>
+            <p>Housed in a display-friendly collector window box and shipped pan-India inside Comicpedia's crush-proof armor mailer.</p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-num">FEATURE 04</span>
+            <h3>Numbered Wave-1 Certificate</h3>
+            <p>Every First-Wave figure includes an individually numbered foil edition card (#001 to #250) exclusive to Wave 1 collectors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EXCLUSIVE EARLY-BIRD OFFER (WITH REAL SUPERMAN: BIRTHRIGHT COVER) -->
+    <section class="offer-section">
+      <div class="container">
+        <div class="vip-reward-box">
+          <div class="birthright-cover-wrap">
+            <img src="https://comicpedia.store/wp-content/uploads/2026/10/s1.jpg" alt="Superman: Birthright Graphic Novel Cover" data-alt-src="https://comicpedia.store/wp-content/uploads/2026/10/s3.jpg" data-title="Superman: Birthright" onerror="handleImgError(this)" />
+            <span class="bundle-half-tag">50% OFF BUNDLE PERK</span>
+          </div>
+
+          <div class="vip-copy">
+            <h2 class="comic-font">🎁 Exclusive Early-Bird Offer (Waitlist Members Only)</h2>
+            <p>Join the free waitlist before launch and unlock all 3 VIP collector rewards automatically:</p>
+            <ul class="vip-perks-list">
+              <li>🔓 <strong>24-Hour Private Early-Access Link</strong> before public release</li>
+              <li>⚡ <strong>Flat 20% Off Launch Price</strong> (Pay ₹2,799 instead of ₹3,499)</li>
+              <li>📘 <strong>50% Off the '<a href="https://comicpedia.store/product/superman-birthright/" target="_blank" rel="noopener" class="book-link">Superman: Birthright</a>' Graphic Novel</strong> (reg. ₹1,399 → <strong>₹699</strong>) when bundled with your figure!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SIGN-UP FORM (EMAIL OR WHATSAPP TOGGLE) & 7. WORKING SHARE BUTTONS -->
+    <section id="waitlist-form" class="signup-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Reserve Your Wave 1 Allocation</span>
+          <h2 class="section-title comic-font">Lock In Your Early-Bird Spot Now</h2>
+        </div>
+
+        <div class="signup-card">
+          <form id="superman-waitlist-form" novalidate>
+            <div class="field-group">
+              <label>How Should We Send Your Private Early-Access Link? *</label>
+              <div class="channel-toggle" role="tablist" aria-label="Choose Email or WhatsApp">
+                <button type="button" class="toggle-btn active" id="toggle-email" data-mode="email">
+                  ✉️ Email Address
+                </button>
+                <button type="button" class="toggle-btn" id="toggle-whatsapp" data-mode="whatsapp">
+                  💬 WhatsApp Number
+                </button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="collector-name">Your First Name *</label>
+              <div class="input-wrap">
+                <span class="input-prefix">🦸</span>
+                <input type="text" id="collector-name" class="field-input" placeholder="e.g. Aarav" required />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="contact-input" id="contact-label">Email Address *</label>
+              <div class="input-wrap">
+                <span class="input-prefix" id="contact-prefix">✉️</span>
+                <input type="email" id="contact-input" class="field-input" placeholder="aarav@example.com" required />
+              </div>
+            </div>
+
+            <p class="form-err-msg" id="wl-error-msg" role="alert"></p>
+
+            <button type="submit" class="btn-heroic" id="wl-submit-btn" style="width: 100%;">
+              Unlock My Early-Bird Spot →
+            </button>
+          </form>
+
+          <!-- Instant VIP Confirmation State -->
+          <div class="vip-confirmation" id="vip-confirm-box" aria-live="polite">
+            <h3 id="vip-spot-headline">🎉 You're In! Spot #188 Reserved</h3>
+            <p id="vip-confirm-detail"></p>
+          </div>
+
+          <!-- 7. WORKING SHARE BUTTONS -->
+          <div class="share-box" id="share-container">
+            <div class="share-title">Spread the Word to Fellow DC Collectors:</div>
+            <div class="share-btns-row">
+              <a href="https://wa.me/?text=Look%20Up!%20Comicpedia%20is%20dropping%20a%20limited%20250-unit%20Collector%27s%20Edition%20Superman%207%22%20Action%20Figure%20with%2020%25%20off%20%2B%2050%25%20off%20Superman%3A%20Birthright!%20Reserve%20your%20spot%3A%20https%3A%2F%2Fcomicpedia.store" target="_blank" rel="noopener" class="share-btn share-wa" id="btn-share-wa">
+                💬 Share on WhatsApp
+              </a>
+              <a href="https://twitter.com/intent/tweet?text=Just%20locked%20in%20my%20Wave-1%20waitlist%20spot%20for%20the%20Collector%27s%20Edition%20Superman%207%22%20Action%20Figure%20on%20Comicpedia!%20%F0%9F%A6%B8%E2%80%8D%E2%99%82%EF%B8%8F%20https%3A%2F%2Fcomicpedia.store" target="_blank" rel="noopener" class="share-btn share-x" id="btn-share-x">
+                𝕏 Post on X / Twitter
+              </a>
+              <button type="button" class="share-btn share-copy" id="btn-copy-link">
+                🔗 Copy Waitlist Link
+              </button>
+            </div>
+            <div class="share-feedback" id="share-feedback" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="waitlist-footer">
+    <div class="container">
+      © 2026 Comicpedia Collector Vault (comicpedia.store) • Man of Steel Series #01 Pre-Launch • Pan-India Armor-Box Shipping.
+    </div>
+  </footer>
+  </section>
+
+  <script>
+    // Unified graceful image fallback handler across all 3 pages
+    function handleImgError(imgEl) {
+      var altSrc = imgEl.getAttribute('data-alt-src');
+      if (altSrc && imgEl.src !== altSrc) {
+        imgEl.removeAttribute('data-alt-src');
+        imgEl.src = altSrc;
+        return;
+      }
+      var title = imgEl.getAttribute('data-title') || imgEl.alt || 'Comicpedia Edition';
+      var fallback = document.createElement('div');
+      fallback.className = 'comic-fallback';
+      fallback.innerHTML =
+        '<span class="fb-logo">COMICPEDIA</span>' +
+        '<span class="fb-title">' + title + '</span>';
+      imgEl.replaceWith(fallback);
+    }
+
+    /* --- Page 1 Scripts (Diwali Mega Sale) --- */
+    
+
+    // Live Countdown Timer to Nov 8, 2026 23:59:00 IST (+05:30) with 72h rolling fallback
+    (function initCountdown() {
+      var targetDate = new Date('2026-11-08T23:59:00+05:30').getTime();
+      var daysEl = document.getElementById('cd-days');
+      var hoursEl = document.getElementById('cd-hours');
+      var minsEl = document.getElementById('cd-mins');
+      var secsEl = document.getElementById('cd-secs');
+
+      function updateTimer() {
+        var now = Date.now();
+        var diff = targetDate - now;
+        if (diff <= 0) {
+          var cycleMs = 72 * 60 * 60 * 1000;
+          diff = cycleMs - (Math.abs(diff) % cycleMs);
+        }
+        var d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        var m = Math.floor((diff / (1000 * 60)) % 60);
+        var s = Math.floor((diff / 1000) % 60);
+
+        if (daysEl) daysEl.textContent = String(d).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
+        if (minsEl) minsEl.textContent = String(m).padStart(2, '0');
+        if (secsEl) secsEl.textContent = String(s).padStart(2, '0');
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    })();
+
+    // Interactive Coupon Copy Button
+    (function initCouponCopy() {
+      var copyBtn = document.getElementById('copy-coupon-btn');
+      var feedbackEl = document.getElementById('copy-feedback');
+      var codeText = 'DIWALICOMICS15';
+
+      if (!copyBtn) return;
+
+      copyBtn.addEventListener('click', function () {
+        function showSuccess() {
+          copyBtn.textContent = 'Copied! ✓';
+          if (feedbackEl) {
+            feedbackEl.textContent = 'Copied! Apply code DIWALICOMICS15 at Checkout on comicpedia.store';
+          }
+          setTimeout(function () {
+            copyBtn.textContent = 'Copy Code';
+          }, 3000);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(codeText).then(showSuccess).catch(function () {
+            fallbackCopy(codeText, showSuccess);
+          });
+        } else {
+          fallbackCopy(codeText, showSuccess);
+        }
+      });
+
+      function fallbackCopy(text, callback) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+        } catch (e) {}
+        document.body.removeChild(ta);
+        callback();
+      }
+    })();
+
+    // Interactive Category Filter Pills
+    (function initCategoryFilter() {
+      var pills = document.querySelectorAll('.filter-pill');
+      var cards = document.querySelectorAll('.product-card');
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          var selected = pill.getAttribute('data-filter');
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+
+          cards.forEach(function (card) {
+            var cat = card.getAttribute('data-category');
+            if (selected === 'all' || cat === selected) {
+              card.removeAttribute('hidden');
+            } else {
+              card.setAttribute('hidden', 'hidden');
+            }
+          });
+        });
+      });
+    })();
+
+    /* --- Page 2 Scripts (Corporate Diwali Gifting) --- */
+    
+
+    // "Enquire For This Box" buttons -> smooth scroll + auto-select dropdown tier
+    (function initTierSelection() {
+      var tierButtons = document.querySelectorAll('.btn-enquire-box');
+      var tierSelect = document.getElementById('box-tier');
+      var formSection = document.getElementById('enquiry-form');
+
+      tierButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var targetTier = btn.getAttribute('data-box-tier');
+          if (tierSelect && targetTier) {
+            tierSelect.value = targetTier;
+            tierSelect.classList.add('highlight-flash');
+            setTimeout(function () {
+              tierSelect.classList.remove('highlight-flash');
+            }, 1600);
+            updateVolumeSlab();
+          }
+          if (formSection) {
+            formSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    })();
+
+    // Live quantity slab helper
+    function updateVolumeSlab() {
+      var qtyInput = document.getElementById('box-qty');
+      var estimateStrip = document.getElementById('live-estimate');
+      if (!qtyInput || !estimateStrip) return;
+      var q = parseInt(qtyInput.value, 10) || 15;
+      var slabText = '15–24 Boxes (Standard Corporate Rate)';
+      if (q >= 100) {
+        slabText = '100+ Boxes (20% Maximum Volume Discount Eligible!)';
+      } else if (q >= 50) {
+        slabText = '50–99 Boxes (14% Corporate Volume Discount Eligible!)';
+      } else if (q >= 25) {
+        slabText = '25–49 Boxes (8% Corporate Volume Discount Eligible)';
+      }
+      estimateStrip.innerHTML =
+        '<span>📊 <strong>Volume Slab Applied:</strong> ' + slabText + '</span>' +
+        '<span>Fast 24-Hr Mockup Included</span>';
+    }
+
+    var qtyEl = document.getElementById('box-qty');
+    if (qtyEl) {
+      qtyEl.addEventListener('input', updateVolumeSlab);
+    }
+
+    // Validated B2B Form Submission
+    (function initB2BForm() {
+      var form = document.getElementById('b2b-quote-form');
+      var errorEl = document.getElementById('b2b-form-error');
+      var successBox = document.getElementById('b2b-success-box');
+      var successDetails = document.getElementById('b2b-success-details');
+
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errorEl.style.display = 'none';
+
+        var name = document.getElementById('full-name').value.trim();
+        var company = document.getElementById('company-name').value.trim();
+        var email = document.getElementById('work-email').value.trim();
+        var phone = document.getElementById('phone-num').value.trim();
+        var tier = document.getElementById('box-tier').value;
+        var qty = parseInt(document.getElementById('box-qty').value, 10);
+        var delivery = document.getElementById('delivery-type').value;
+
+        if (!name || !company || !email || !phone) {
+          errorEl.textContent = 'Please fill in your Full Name, Company Name, Work Email, and Phone/WhatsApp number.';
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          errorEl.textContent = 'Please enter a valid work email address.';
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        if (isNaN(qty) || qty < 15) {
+          errorEl.textContent = 'Minimum Order Quantity (MOQ) is 15 boxes. Please enter 15 or more.';
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        successDetails.textContent =
+          'Thank you, ' + name + ' (' + company + ')! We have logged your bulk enquiry for ' +
+          qty + ' units of "' + tier + '" (' + delivery + '). Our Corporate Gifting Desk will send your custom quote and 3D box mockup to ' +
+          email + ' and WhatsApp (' + phone + ') within 4 business hours.';
+        successBox.style.display = 'block';
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+
+    // Interactive FAQ Accordion
+    (function initFaqAccordion() {
+      var triggers = document.querySelectorAll('.faq-trigger');
+      triggers.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = btn.parentElement;
+          var isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(function (el) {
+            el.classList.remove('open');
+            var t = el.querySelector('.faq-trigger');
+            if (t) t.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+
+    /* --- Page 3 Scripts (Superman Collector Waitlist) --- */
+    // Easy-to-swap variable for custom Superman Figure photo URL (leave empty to show custom SVG display)
+    var SUPERMAN_FIGURE_IMAGE_URL = '';
+
+    (function initFigureImage() {
+      var imgEl = document.getElementById('custom-figure-img');
+      var svgWrap = document.getElementById('heroic-svg-placeholder');
+      if (SUPERMAN_FIGURE_IMAGE_URL && imgEl && svgWrap) {
+        imgEl.src = SUPERMAN_FIGURE_IMAGE_URL;
+        imgEl.style.display = 'block';
+        svgWrap.style.display = 'none';
+        imgEl.onerror = function () {
+          imgEl.style.display = 'none';
+          svgWrap.style.display = 'block';
+        };
+      }
+    })();
+
+    
+
+    // Launch Countdown Timer to November 15, 2026 at 12:00 PM IST (+05:30)
+    (function initLaunchCountdown() {
+      var launchTime = new Date('2026-11-15T12:00:00+05:30').getTime();
+      var dEl = document.getElementById('wl-days');
+      var hEl = document.getElementById('wl-hours');
+      var mEl = document.getElementById('wl-mins');
+      var sEl = document.getElementById('wl-secs');
+
+      function tick() {
+        var diff = launchTime - Date.now();
+        if (diff <= 0) {
+          var cycle = 72 * 3600 * 1000;
+          diff = cycle - (Math.abs(diff) % cycle);
+        }
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff / 3600000) % 24);
+        var m = Math.floor((diff / 60000) % 60);
+        var s = Math.floor((diff / 1000) % 60);
+
+        if (dEl) dEl.textContent = String(d).padStart(2, '0');
+        if (hEl) hEl.textContent = String(h).padStart(2, '0');
+        if (mEl) mEl.textContent = String(m).padStart(2, '0');
+        if (sEl) sEl.textContent = String(s).padStart(2, '0');
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // Segmented Email OR WhatsApp Toggle + Validation
+    (function initWaitlistForm() {
+      var mode = 'email';
+      var btnEmail = document.getElementById('toggle-email');
+      var btnWa = document.getElementById('toggle-whatsapp');
+      var contactLabel = document.getElementById('contact-label');
+      var contactPrefix = document.getElementById('contact-prefix');
+      var contactInput = document.getElementById('contact-input');
+      var form = document.getElementById('superman-waitlist-form');
+      var errEl = document.getElementById('wl-error-msg');
+      var confirmBox = document.getElementById('vip-confirm-box');
+      var confirmDetail = document.getElementById('vip-confirm-detail');
+      var shareContainer = document.getElementById('share-container');
+      var countText = document.getElementById('scarcity-count-text');
+      var leftText = document.getElementById('scarcity-left-text');
+      var fillBar = document.getElementById('scarcity-fill');
+
+      function setChannel(newMode) {
+        mode = newMode;
+        errEl.style.display = 'none';
+        if (mode === 'email') {
+          btnEmail.classList.add('active');
+          btnWa.classList.remove('active');
+          contactLabel.textContent = 'Email Address *';
+          contactPrefix.textContent = '✉️';
+          contactInput.type = 'email';
+          contactInput.placeholder = 'aarav@example.com';
+          contactInput.value = '';
+        } else {
+          btnWa.classList.add('active');
+          btnEmail.classList.remove('active');
+          contactLabel.textContent = 'WhatsApp Mobile Number (+91) *';
+          contactPrefix.textContent = '+91';
+          contactInput.type = 'tel';
+          contactInput.placeholder = '98765 43210';
+          contactInput.value = '';
+        }
+      }
+
+      if (btnEmail && btnWa) {
+        btnEmail.addEventListener('click', function () { setChannel('email'); });
+        btnWa.addEventListener('click', function () { setChannel('whatsapp'); });
+      }
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          errEl.style.display = 'none';
+
+          var firstName = document.getElementById('collector-name').value.trim();
+          var contactVal = contactInput.value.trim();
+
+          if (!firstName) {
+            errEl.textContent = 'Please enter your first name to reserve your numbered spot.';
+            errEl.style.display = 'block';
+            return;
+          }
+
+          if (mode === 'email') {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactVal)) {
+              errEl.textContent = 'Please enter a valid email address (e.g. aarav@example.com).';
+              errEl.style.display = 'block';
+              return;
+            }
+          } else {
+            var digits = contactVal.replace(/\D/g, '');
+            if (digits.length < 10) {
+              errEl.textContent = 'Please enter a valid 10-digit Indian WhatsApp number.';
+              errEl.style.display = 'block';
+              return;
+            }
+          }
+
+          var destination = mode === 'email' ? contactVal : ('+91 ' + contactVal);
+          confirmDetail.textContent =
+            'Welcome to Wave 1, ' + firstName + '! Your 24-hour early-access link, Flat 20% Off figure code, and 50% Off "Superman: Birthright" bundle pass will be sent to ' +
+            destination + ' on November 14, 2026 at 12:00 PM IST.';
+          confirmBox.style.display = 'block';
+          if (shareContainer) shareContainer.classList.add('highlight-share');
+          if (countText) countText.textContent = '🔥 188 of 250 First-Wave Waitlist Spots Claimed';
+          if (leftText) leftText.textContent = 'Only 62 Early-Bird Spots Remaining!';
+          if (fillBar) fillBar.style.width = '75.2%';
+        });
+      }
+    })();
+
+    // Copy Waitlist Link button
+    (function initCopyWaitlistLink() {
+      var copyBtn = document.getElementById('btn-copy-link');
+      var feedback = document.getElementById('share-feedback');
+      var shareUrl = 'https://comicpedia.store/superman-collector-waitlist';
+
+      if (!copyBtn) return;
+
+      copyBtn.addEventListener('click', function () {
+        function done() {
+          copyBtn.textContent = '✓ Link Copied!';
+          if (feedback) {
+            feedback.textContent = 'Waitlist link copied to clipboard: ' + shareUrl;
+          }
+          setTimeout(function () {
+            copyBtn.textContent = '🔗 Copy Waitlist Link';
+          }, 3000);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(shareUrl).then(done).catch(function () {
+            fallbackCopy(shareUrl, done);
+          });
+        } else {
+          fallbackCopy(shareUrl, done);
+        }
+      });
+
+      function fallbackCopy(text, cb) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+        } catch (err) {}
+        document.body.removeChild(ta);
+        cb();
+      }
+    })();
+  </script>
+</body>
+</html>
